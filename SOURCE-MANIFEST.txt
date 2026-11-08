@@ -1,0 +1,50 @@
+MacOS Manager source archive
+This is source. It is not a built .app or .pkg.
+commit=314130a5f87e77a2fbea4315240bdabf0725878b
+short=314130a
+subject=State the USB erase warning in words the tests can check.
+origin_of_truth=private Origin draft; this box is a copy for a private GitHub build run
+github_destination=https://github.com/thompsonoffice/MacOS-Manager
+visibility_expected=private
+workflow=.github/workflows/macos-build.yml
+workflow_triggers=workflow_dispatch only
+do_not_dispatch_until=account hard $0 Stop-usage budget is confirmed on the GitHub account that will run it
+runner_label=macos-15-intel
+architectures=x86_64 arm64
+deployment_target=14.0
+package=unsigned pkgbuild install-location /Applications, no installer scripts
+not_included=signing, notarization, VoiceOver speech, USB write, macOS install
+
+Tracked paths and modes:
+100644 .github/workflows/macos-build.yml
+100644 .gitignore
+100644 HANDOFF.md
+100644 MacOSManager.xcodeproj/project.pbxproj
+100644 MacOSManager.xcodeproj/xcshareddata/xcschemes/MacOSManager.xcscheme
+100644 MacOSManagerApp/AboutView.swift
+100644 MacOSManagerApp/CompatibilityView.swift
+100644 MacOSManagerApp/DownloadView.swift
+100644 MacOSManagerApp/IdentifyView.swift
+100644 MacOSManagerApp/Info.plist
+100644 MacOSManagerApp/MacOSManager.entitlements
+100644 MacOSManagerApp/MacOSManagerApp.swift
+100644 MacOSManagerApp/RootView.swift
+100644 MacOSManagerApp/Session.swift
+100644 MacOSManagerApp/SystemProbe.swift
+100644 MacOSManagerApp/USBView.swift
+100644 Package.swift
+100644 README.md
+100644 REVIEW.md
+100644 Sources/MacOSManagerCore/Catalog.swift
+100644 Sources/MacOSManagerCore/CommandRunner.swift
+100644 Sources/MacOSManagerCore/DiskSurvey.swift
+100644 Sources/MacOSManagerCore/Guidance.swift
+100644 Sources/MacOSManagerCore/InstallWorkflow.swift
+100644 Sources/MacOSManagerCore/Report.swift
+100644 Sources/MacOSManagerCore/Resources/catalog.json
+100644 Sources/MacOSManagerCore/Rules.swift
+100644 Tests/MacOSManagerCoreTests/CatalogTests.swift
+100644 Tests/MacOSManagerCoreTests/InstallWorkflowTests.swift
+100644 Tools/extract_catalog.py
+100755 scripts/check-intel-pkg-setup.sh
+100755 scripts/package-macos-app.sh

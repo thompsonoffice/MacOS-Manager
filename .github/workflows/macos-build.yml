@@ -1,0 +1,40 @@
+# Ready to copy into a GitHub repository Hunter approves.
+# This file does not run from the Origin draft. It has no push or pull_request trigger.
+# Do not start it until that repository exists and hosted macOS minutes are known to be free.
+#
+# Runner: macos-15-intel. GitHub's runner reference lists that label as Intel.
+# macos-latest and macos-26 are arm64 and are not used here.
+# The macOS 15 Intel image readme lists default Xcode 16.4, which can deploy back to macOS 14.
+#
+# A green run builds, unit-tests, and uploads an unsigned zip and pkg.
+# It does not launch the app, capture VoiceOver speech, write a USB, install macOS, sign, or notarize.
+# The runner image enables AppleScript control of VoiceOver during image setup. That is not a speech test.
+name: macOS build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    timeout-minutes: 45
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@v4
+
+      - name: Unit tests
+        run: swift test
+
+      - name: Unsigned app and package
+        env:
+          MACOS_MANAGER_SKIP_UNIT_TEST: "1"
+        run: scripts/package-macos-app.sh
+
+      - name: Upload unsigned zip and package
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacOSManager-unsigned
+          path: |
+            build/product/*.zip
+            build/product/*.pkg
+          if-no-files-found: error
