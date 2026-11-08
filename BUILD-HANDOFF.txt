@@ -1,0 +1,13 @@
+Build handoff for a private GitHub run. This file is not an installer.
+
+Put this source on https://github.com/thompsonoffice/MacOS-Manager, private, branch main.
+Do not make the repository public.
+The workflow .github/workflows/macos-build.yml starts only with workflow_dispatch.
+Pushing it does not start a job. Do not press Run unless the GitHub account has a hard $0 Actions budget with Stop usage enabled.
+
+On that manual run the job uses macos-15-intel, runs swift test, then scripts/package-macos-app.sh.
+The script builds a universal x86_64 and arm64 app for macOS 14 or later and an unsigned package that copies MacOSManager.app into /Applications.
+The package has no scripts. It does not format a disk or install macOS.
+The run does not launch the app, hear VoiceOver, write a USB, or install macOS.
+
+The app itself requires macOS 14 or later. Listing an older system for a target Mac does not mean this app runs on Mac OS X 10.

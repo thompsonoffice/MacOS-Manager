@@ -1,0 +1,4309 @@
+{
+  "retrieved": "2026-11-06",
+  "product": "macOS Manager",
+  "statement": "Facts below were read from public Apple Support pages on 2026-11-06. A model is listed for a macOS version only when its exact Apple model name appears on that version's compatibility page. Factory macOS is not on these identify pages and is omitted. A published download link is not a statement that Software Update currently offers that installer for a particular Mac.",
+  "models": [
+    {
+      "name": "MacBook Pro (14-inch, M6)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac18,1"
+      ],
+      "description": "This model has the M6 chip and includes three Thunderbolt 4 ports.",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MHWT4xx/A",
+        "MHWU4xx/A",
+        "MHWV4xx/A",
+        "MHWW4xx/A",
+        "MHWX4xx/A",
+        "MHWY4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M6"
+    },
+    {
+      "name": "MacBook Pro (14-inch PROLED XDR, M5 Pro or M5 Max)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac17,11",
+        "Mac17,13"
+      ],
+      "description": "This model has PROLED XDR Display, the M5 Pro or M5 Max chip, and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MJ2G4xx/A",
+        "MJ2J4xx/A",
+        "MJ2K4xx/A",
+        "MJ2M4xx/A",
+        "MJ2N4xx/A",
+        "MJ2Q4xx/A",
+        "MJ2T4xx/A",
+        "MJ2V4xx/A",
+        "MMF54xx/A",
+        "MMF64xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Pro or M5 Max"
+    },
+    {
+      "name": "MacBook Pro (16-inch PROLED XDR, M5 Pro or M5 Max)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac17,10",
+        "Mac17,12"
+      ],
+      "description": "This model has PROLED XDR Display, the M5 Pro or M5 Max chip, and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MJ2W4xx/A",
+        "MJ2X4xx/A",
+        "MJ2Y4xx/A",
+        "MJ304xx/A",
+        "MJ314xx/A",
+        "MJ334xx/A",
+        "MMF94xx/A",
+        "MMFA4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Pro or M5 Max"
+    },
+    {
+      "name": "MacBook Pro (14-inch, M5 Pro or M5 Max)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac17,7",
+        "Mac17,9"
+      ],
+      "description": "This model has the M5 Pro or M5 Max chip and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MGDN4xx/A",
+        "MGDP4xx/A",
+        "MGDQxx/A",
+        "MGDR4xx/A",
+        "MGDT4xx/A",
+        "MGDU4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Pro or M5 Max"
+    },
+    {
+      "name": "MacBook Pro (16-inch, M5 Pro or M5 Max)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac17,6",
+        "Mac17,8"
+      ],
+      "description": "This model has the M5 Pro or M5 Max chip and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MGE44xx/A",
+        "MGE64xx/A",
+        "MGE74xx/A",
+        "MGE94xx/A",
+        "MGEA4xx/A",
+        "MGEC4xx/A",
+        "MGED4xx/A",
+        "MGEE4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Pro or M5 Max"
+    },
+    {
+      "name": "MacBook Pro (14-inch, M5)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac17,2"
+      ],
+      "description": "This model has the M5 chip and includes three Thunderbolt 4 ports.",
+      "yearIntroduced": 2025,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MDE04xx/A",
+        "MDE14xx/A",
+        "MDE34xx/A",
+        "MDE44xx/A",
+        "MDE54xx/A",
+        "MDE64xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5"
+    },
+    {
+      "name": "MacBook Pro (14-inch, 2024)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac16,1"
+      ],
+      "description": "This model has the M4 chip and includes three Thunderbolt 4 ports.",
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MCX04xx/A",
+        "MCX14xx/A",
+        "MW2U3xx/A",
+        "MW2V3xx/A",
+        "MW2W3xx/A",
+        "MW2X3xx/A",
+        "MXCM3xx/A",
+        "MXCN3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4"
+    },
+    {
+      "name": "MacBook Pro (14-inch, 2024)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac16,6",
+        "Mac16,8"
+      ],
+      "description": "This model has the M4 Pro or M4 Max chip and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MXE63xx/A",
+        "MX2E3xx/A",
+        "MX2F3xx/A",
+        "MX2G3xx/A",
+        "MX2H3xx/A",
+        "MX2J3xx/A",
+        "MX2K3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4 Pro or M4 Max"
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2024)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac16,7",
+        "Mac16,5"
+      ],
+      "description": "This model has the M4 Pro or M4 Max chip and includes three Thunderbolt 5 ports.",
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MX2T3xx/A",
+        "MX2U3xx/A",
+        "MX2V3xx/A",
+        "MX2W3xx/A",
+        "MX2X3xx/A",
+        "MX2Y3xx/A",
+        "MX303xx/A",
+        "MX313xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4 Pro or M4 Max"
+    },
+    {
+      "name": "MacBook Pro (14-inch, Nov 2023)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac15,3"
+      ],
+      "description": "This model has the M3 chip and includes two Thunderbolt / USB 4 ports.",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MR7J3xx/A",
+        "MR7K3xx/A",
+        "MRX23xx/A",
+        "MTL73xx/A",
+        "MTL83xx/A",
+        "MTLC3xx/A",
+        "MXE03xx/A",
+        "MXE13xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3"
+    },
+    {
+      "name": "MacBook Pro (14-inch, Nov 2023)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac15,6",
+        "Mac15,8",
+        "Mac15,10"
+      ],
+      "description": "This model has the M3 Pro or M3 Max chip and includes three Thunderbolt 4 ports.",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "FRX33xx/A",
+        "FRX43xx/A",
+        "FRX54xx/A",
+        "FRX63xx/A",
+        "FRX73xx/A",
+        "FRX83xx/A",
+        "MRX33xx/A",
+        "MRX43xx/A",
+        "MRX53xx/A",
+        "MRX63xx/A",
+        "MRX73xx/A",
+        "MRX83xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3 Pro or M3 Max"
+    },
+    {
+      "name": "MacBook Pro (16-inch, Nov 2023)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac15,7",
+        "Mac15,9",
+        "Mac15,11"
+      ],
+      "description": "This model has the M3 Pro or M3 Max chip and includes three Thunderbolt 4 ports.",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "FRW13xx/A",
+        "FRW23xx/A",
+        "FRW33xx/A",
+        "FRW43xx/A",
+        "FRW63xx/A",
+        "FRW73xx/A",
+        "FUW63xx/A",
+        "FUW73xx/A",
+        "MRW13xx/A",
+        "MRW23xx/A",
+        "MRW33xx/A",
+        "MRW43xx/A",
+        "MRW63xx/A",
+        "MRW73xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3 Pro or M3 Max"
+    },
+    {
+      "name": "MacBook Pro (14-inch, 2023)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac14,5",
+        "Mac14,9"
+      ],
+      "description": null,
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MPHE3xx/A",
+        "MPHF3xx/A",
+        "MPHG3xx/A",
+        "MPHH3xx/A",
+        "MPHJ3xx/A",
+        "MPHK3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2023)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac14,6",
+        "Mac14,10"
+      ],
+      "description": null,
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNWG3xx/A",
+        "MNW93xx/A",
+        "MNWK3xx/A",
+        "MNWD3xx/A",
+        "MNWF3xx/A",
+        "MNW83xx/A",
+        "MNWJ3xx/A",
+        "MNWC3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, M2, 2022)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "Mac14,7"
+      ],
+      "description": null,
+      "yearIntroduced": 2022,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNEH3xx/A",
+        "MNEJ3xx/A",
+        "MNEP3xx/A",
+        "MNEQ3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2"
+    },
+    {
+      "name": "MacBook Pro (14-inch, 2021)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro18,3",
+        "MacBookPro18,4"
+      ],
+      "description": null,
+      "yearIntroduced": 2021,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MKGP3xx/A",
+        "MKGQ3xx/A",
+        "MKGR3xx/A",
+        "MKGT3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2021)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro18,1",
+        "MacBookPro18,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2021,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MK183xx/A",
+        "MK193xx/A",
+        "MK1A3xx/A",
+        "MK1E3xx/A",
+        "MK1F3xx/A",
+        "MK1H3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, M1, 2020)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro17,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MYD83xx/A",
+        "MYD92xx/A",
+        "MYDA2xx/A",
+        "MYDC2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1"
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro16,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MXK32xx/A",
+        "MXK52xx/A",
+        "MXK62xx/A",
+        "MXK72xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro16,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MWP42xx/A",
+        "MWP52xx/A",
+        "MWP62xx/A",
+        "MWP72xx/A",
+        "MWP82xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Tahoe 26",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (16-inch, 2019)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro16,1",
+        "MacBookPro16,4"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MVVJ2xx/A",
+        "MVVK2xx/A",
+        "MVVL2xx/A",
+        "MVVM2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Tahoe 26",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro15,4"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MUHN2xx/A",
+        "MUHP2xx/a",
+        "MUHQ2xx/A",
+        "MUHR2xx/A",
+        "MUHR2xx/B"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2019)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro15,1",
+        "MacBookPro15,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MV902xx/A",
+        "MV912xx/A",
+        "MV922xx/A",
+        "MV932xx/A",
+        "MV942xx/A",
+        "MV952xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro15,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MV962xx/A",
+        "MV972xx/A",
+        "MV982xx/A",
+        "MV992xx/A",
+        "MV9A2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2018)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro15,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2018,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MR932xx/A",
+        "MR942xx/A",
+        "MR952xx/A",
+        "MR962xx/A",
+        "MR972xx/A",
+        "MUQH2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro15,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2018,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MR9Q2xx/A",
+        "MR9R2xx/A",
+        "MR9T2xx/A",
+        "MR9U2xx/A",
+        "MR9V2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2017)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro14,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MPTR2xx/A",
+        "MPTT2xx/A",
+        "MPTU2xx/A",
+        "MPTV2xx/A",
+        "MPTW2xx/A",
+        "MPTX2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro14,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MPXV2xx/A",
+        "MPXW2xx/A",
+        "MPXX2xx/A",
+        "MPXY2xx/A",
+        "MQ002xx/A",
+        "MQ012xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro14,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MPXQ2xx/A",
+        "MPXR2xx/A",
+        "MPXT2xx/A",
+        "MPXU2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2016)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro13,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2016,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MLH32xx/A",
+        "MLH42xx/A",
+        "MLH52xx/A",
+        "MLW72xx/A",
+        "MLW82xx/A",
+        "MLW92xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro13,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2016,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MLH12xx/A",
+        "MLVP2xx/A",
+        "MNQF2xx/A",
+        "MNQG2xx/A",
+        "MPDK2xx/A",
+        "MPDL2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro13,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2016,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MLL42xx/A",
+        "MLUQ2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 15-inch, Mid 2015)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro11,4",
+        "MacBookPro11,5"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MJLQ2xx/A",
+        "MJLT2xx/A",
+        "MJLU2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 13-inch, Early 2015)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro12,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MF839xx/A",
+        "MF840xx/A",
+        "MF841xx/A",
+        "MF843xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 15-inch, Mid 2014)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro11,2",
+        "MacBookPro11,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGXC2xx/A",
+        "MGXA2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 13-inch, Mid 2014)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro11,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGX72xx/A",
+        "MGX82xx/A",
+        "MGX92xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 15-inch, Late 2013)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro11,2",
+        "MacBookPro11,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME293xx/A",
+        "ME294xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 13-inch, Late 2013)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro11,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME864xx/A",
+        "ME865xx/A",
+        "ME866xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 15-inch, Early 2013)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME664xx/A",
+        "ME665xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 13-inch, Early 2013)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro10,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD212xx/A",
+        "ME662xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 13-inch, Late 2012)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro10,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD212xx/A",
+        "MD213xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (Retina, 15-inch, Mid 2012)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Mid 2012)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD103xx/A",
+        "MD104xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, Mid 2012)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro9,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD101xx/A",
+        "MD102xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Late 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD311xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Late 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD322xx/A",
+        "MD318xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, Late 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD314xx/A",
+        "MD313xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Early 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC725xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Early 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC723xx/A",
+        "MC721xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, Early 2011)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro8,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC724xx/A",
+        "MC700xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Mid 2010)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro6,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC024xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Mid 2010)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro6,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC373xx/A",
+        "MC372xx/A",
+        "MC371xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, Mid 2010)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC375xx/A",
+        "MC374xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Mid 2009)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC226xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Mid 2009)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB985xx/A",
+        "MB986xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, 2.53GHz, Mid 2009)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC118xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (13-inch, Mid 2009)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,5"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB991xx/A",
+        "MB990xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Early 2009)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB604xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Late 2008)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2008,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB470xx/A",
+        "MB471xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (17-inch, Early 2008)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro4,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2008,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB166xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Pro (15-inch, Early 2008)",
+      "family": "MacBook Pro",
+      "identifiers": [
+        "MacBookPro4,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2008,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB133xx/A",
+        "MB134xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108052",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (15-inch, M5)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac17,4"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MDV94xx/A",
+        "MDVA4xx/A",
+        "MDVC4xx/A",
+        "MDVD4xx/A",
+        "MDVE4xx/A",
+        "MDVF4xx/A",
+        "MDVH4xx/A",
+        "MDVK4xx/A",
+        "MDVN4xx/A",
+        "MDVQ4xx/A",
+        "MDVT4xx/A",
+        "MDVU4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5"
+    },
+    {
+      "name": "MacBook Air (13-inch, M5)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac17,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MDH74xx/A",
+        "MDH84xx/A",
+        "MDH84xx/A",
+        "MDHA4xx/A",
+        "MDHC4xx/A",
+        "MDHD4xx/A",
+        "MDHE4xx/A",
+        "MDHF4xx/A",
+        "MDHG4xx/A",
+        "MDHH4xx/A",
+        "MDHJ4xx/A",
+        "MDHK4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5"
+    },
+    {
+      "name": "MacBook Air (15-inch, M4, 2025)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac16,13"
+      ],
+      "description": null,
+      "yearIntroduced": 2025,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC6J4xx/A",
+        "MC6K4xx/A",
+        "MC6L4xx/A",
+        "MC7A4xx/A",
+        "MC7C4xx/A",
+        "MC7D4xx/A",
+        "MDG34xx/A",
+        "MDG84xx/A",
+        "MDG94xx/A",
+        "MW1G3xx/A",
+        "MW1H3xx/A",
+        "MW1J3xx/A",
+        "MW1K3xx/A",
+        "MW1L3xx/A",
+        "MW1M3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4"
+    },
+    {
+      "name": "MacBook Air (13-inch, M4, 2025)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac16,12"
+      ],
+      "description": null,
+      "yearIntroduced": 2025,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC654xx/A",
+        "MC6A4xx/A",
+        "MC6C4xx/A",
+        "MC6T4xx/A",
+        "MC6U4xx/A",
+        "MC6V4xx/A",
+        "MDG24xx/A",
+        "MDG54xx/A",
+        "MDG64xx/A",
+        "MW0W3xx/A",
+        "MW0X3xx/A",
+        "MW0Y3xx/A",
+        "MW103xx/A",
+        "MW123xx/A",
+        "MW133xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4"
+    },
+    {
+      "name": "MacBook Air (15-inch, M3, 2024)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac15,13"
+      ],
+      "description": null,
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRYM3xx/A",
+        "MRYP3xx/A",
+        "MRYR3xx/A",
+        "MRYU3xx/A",
+        "MRYN3xx/A",
+        "MRYQ3xx/A",
+        "MRYT3xx/A",
+        "MRYV3xx/A",
+        "MXD13xx/A",
+        "MXD23xx/A",
+        "MXD33xx/A",
+        "MXD43xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3"
+    },
+    {
+      "name": "MacBook Air (13-inch, M3, 2024)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac15,12"
+      ],
+      "description": null,
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRXN3xx/A",
+        "MRXQ3xx/A",
+        "MRXT3xx/A",
+        "MRXV3xx/A",
+        "MRXP3xx/A",
+        "MRXR3xx/A",
+        "MRXU3xx/A",
+        "MRXW3xx/A",
+        "MXCR3xx/A",
+        "MXCT3xx/A",
+        "MXCU3xx/A",
+        "MXCV3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3"
+    },
+    {
+      "name": "MacBook Air (15-inch, M2, 2023)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac14,15"
+      ],
+      "description": null,
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQKP3xx/A",
+        "MQKQ3xx/A",
+        "MQKR3xx/A",
+        "MQKT3xx/A",
+        "MQKU3xx/A",
+        "MQKV3xx/A",
+        "MQKW3xx/A",
+        "MQKX3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2"
+    },
+    {
+      "name": "MacBook Air (M2, 2022)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "Mac14,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2022,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MLXW3xx/A",
+        "MLXX3xx/A",
+        "MLXY3xx/A",
+        "MLY03xx/A",
+        "MLY13xx/A",
+        "MLY23xx/A",
+        "MLY33xx/A",
+        "MLY43xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2"
+    },
+    {
+      "name": "MacBook Air (M1, 2020)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGN63xx/A",
+        "MGN93xx/A",
+        "MGND3xx/A",
+        "MGN73xx/A",
+        "MGNA3xx/A",
+        "MGNE3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1"
+    },
+    {
+      "name": "MacBook Air (Retina, 13-inch, 2020)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MVH22xx/A",
+        "MVH42xx/A",
+        "MVH52xx/A",
+        "MWTJ2xx/A",
+        "MWTK2xx/A",
+        "MWTL2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (Retina, 13-inch, 2019)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir8,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MVFH2xx/A",
+        "MVFJ2xx/A",
+        "MVFK2xx/A",
+        "MVFL2xx/A",
+        "MVFM2xx/A",
+        "MVFN2xx/A",
+        "MVH62xx/A",
+        "MVH82xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sonoma",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (Retina, 13-inch, 2018)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir8,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2018,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRE82xx/A",
+        "MREA2xx/A",
+        "MREE2xx/A",
+        "MRE92xx/A",
+        "MREC2xx/A",
+        "MREF2xx/A",
+        "MUQT2xx/A",
+        "MUQU2xx/A",
+        "MUQV2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sonoma",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, 2017)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir7,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQD32xx/A",
+        "MQD42xx/A",
+        "MQD52xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Early 2015)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir7,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MJVE2xx/A",
+        "MJVG2xx/A",
+        "MMGF2xx/A",
+        "MMGG2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Early 2015)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MJVM2xx/A",
+        "MJVP2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Early 2014)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir6,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD760xx/B",
+        "MD761xx/B"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Early 2014)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir6,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD711xx/B",
+        "MD712xx/B"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Mid 2013)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir6,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD760xx/A",
+        "MD761xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Mid 2013)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir6,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD711xx/A",
+        "MD712xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Mid 2012)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD231xx/A",
+        "MD232xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Mid 2012)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD223xx/A",
+        "MD224xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Mid 2011)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir4,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC965xx/A",
+        "MC966xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Mid 2011)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir4,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC968xx/A",
+        "MC969xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (13-inch, Late 2010)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir3,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC503xx/A",
+        "MC504xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (11-inch, Late 2010)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir3,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC505xx/A",
+        "MC506xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Air (Mid 2009)",
+      "family": "MacBook Air",
+      "identifiers": [
+        "MacBookAir2,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC505xx/A",
+        "MC233xx/A",
+        "MC234xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102869",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, M6, Four ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac18,2"
+      ],
+      "description": "Ports: Four Thunderbolt 4 ports",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MH114xx/A",
+        "MH154xx/A",
+        "MH164xx/A",
+        "MH174xx/A",
+        "MH184xx/A",
+        "MH194xx/A",
+        "MH1D4xx/A",
+        "MH1F4xx/A",
+        "MH1G4xx/A",
+        "MH1H4xx/A",
+        "MH1J4xx/A",
+        "MH1N4xx/A",
+        "MH1P4xx/A",
+        "MH1Q4xx/A",
+        "MH1R4xx/A",
+        "MH1W4xx/A",
+        "MH1X4xx/A",
+        "MH204xx/A",
+        "MH214xx/A",
+        "MH224xx/A",
+        "MH234xx/A",
+        "MH244xx/A",
+        "MH254xx/A",
+        "MH264xx/A",
+        "MH274xx/A",
+        "MH284xx/A",
+        "MH294xx/A",
+        "MH2A4xx/A",
+        "MH2C4xx/A",
+        "MH2D4xx/A",
+        "MH2E4xx/A",
+        "MH2F4xx/A",
+        "MH2G4xx/A",
+        "MH2H4xx/A",
+        "MH2J4xx/A",
+        "MH2K4xx/A",
+        "MH2L4xx/A",
+        "MH2M4xx/A",
+        "MH2N4xx/A",
+        "MH2P4xx/A",
+        "MH2Q4xx/A",
+        "MH2T4xx/A",
+        "MH2U4xx/A",
+        "MH2V4xx/A",
+        "MH2W4xx/A",
+        "MH2X4xx/A",
+        "MH2Y4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M6"
+    },
+    {
+      "name": "iMac (24-inch, M6, Two ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac18,2"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports",
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MH064xx/A",
+        "MH074xx/A",
+        "MH084xx/A",
+        "MH094xx/A",
+        "MH0A4xx/A",
+        "MH0D4xx/A",
+        "MH0F4xx/A",
+        "MH0G4xx/A",
+        "MH0J4xx/A",
+        "MH0M4xx/A",
+        "MH0Q4xx/A",
+        "MH0U4xx/A",
+        "MH0V4xx/A",
+        "MH0W4xx/A",
+        "MH0X4xx/A",
+        "MH104xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M6"
+    },
+    {
+      "name": "iMac (24-inch, 2024, Four ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac16,3"
+      ],
+      "description": "Ports: Four Thunderbolt 4 ports",
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MCR24xx/A",
+        "MD2P4xx/A",
+        "MD2Q4xx/A",
+        "MD2T4xx/A",
+        "MD2U4xx/A",
+        "MD2V4xx/A",
+        "MD2W4xx/A",
+        "MD2X4xx/A",
+        "MD2Y4xx/A",
+        "MD3A4xx/A",
+        "MD3D4xx/A",
+        "MD3E4xx/A",
+        "MD3F4xx/A",
+        "MD3G4xx/A",
+        "MD3H4xx/A",
+        "MWUU3xx/A",
+        "MWUV3xx/A",
+        "MWUW3xx/A",
+        "MWUX3xx/A",
+        "MWUY3xx/A",
+        "MWV03xx/A",
+        "MWV13xx/A",
+        "MWV33xx/A",
+        "MWV43xx/A",
+        "MWV53xx/A",
+        "MWV63xx/A",
+        "MWV73xx/A",
+        "MWV83xx/A",
+        "MWV93xx/A",
+        "MWVA3xx/A",
+        "MWVC3xx/A",
+        "MWVD3xx/A",
+        "MWVE3xx/A",
+        "MWVF3xx/A",
+        "MWVG3xx/A",
+        "MWVH3xx/A",
+        "MWVJ3xx/A",
+        "MWVK3xx/A",
+        "MWVL3xx/A",
+        "MWVN3xx/A",
+        "MWVP3xx/A",
+        "MWVQ3xx/A",
+        "MWVR3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, 2024, Two ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac16,2"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports",
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MWUD3xx/A",
+        "MWUE3xx/A",
+        "MWUF3xx/A",
+        "MWUG3xx/A",
+        "MWUH3xx/A",
+        "MWUJ3xx/A",
+        "MWUK3xx/A",
+        "MWUL3xx/A",
+        "MWUN3xx/A",
+        "MWUPxx/A",
+        "MWUQ3xx/A",
+        "MWUR3xx/A",
+        "MWUT3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, 2023, Four ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac15,5"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports, Two USB 3 ports",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQRJ3xx/A",
+        "MQRK3xx/A",
+        "MQRL3xx/A",
+        "MQRM3xx/A",
+        "MQRN3xx/A",
+        "MQRP3xx/A",
+        "MQRQ3xx/A",
+        "MQRR3xx/A",
+        "MQRT3xx/A",
+        "MQRU3xx/A",
+        "MQRV3xx/A",
+        "MQRW3xx/A",
+        "MQRX3xx/A",
+        "MQRY3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, 2023, Two ports)",
+      "family": "iMac",
+      "identifiers": [
+        "Mac15,4"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQR93xx/A",
+        "MQRA3xx/A",
+        "MQRC3xx/A",
+        "MQRD3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, M1, 2021)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac21,1"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports, Two USB 3 ports",
+      "yearIntroduced": 2021,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGPC3xx/A",
+        "MGPD3xx/A",
+        "MGPF3xx/A",
+        "MGPG3xx/A",
+        "MGPH3xx/A",
+        "MGPJ3xx/A",
+        "MGPK3xx/A",
+        "MGPL3xx/A",
+        "MGPM3xx/A",
+        "MGPN3xx/A",
+        "MGPP3xx/A",
+        "MGPQ3xx/A",
+        "MGPR3xx/A",
+        "MGPT3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1"
+    },
+    {
+      "name": "iMac (24-inch, M1, 2021)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac21,2"
+      ],
+      "description": "Ports: Two Thunderbolt / USB 4 ports",
+      "yearIntroduced": 2021,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGTF3xx/a",
+        "MJV83xx/a",
+        "MJV93xx/a",
+        "MJVA3xx/a"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1"
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, 2020)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac20,1",
+        "iMac20,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MXWT2xx/A",
+        "MXWU2xx/A",
+        "MXWV2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Tahoe 26",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, 2019)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac19,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRQYxx/A",
+        "MRR0xx/A",
+        "MRR1xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 4K, 21.5-inch, 2019)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac19,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRT3xx/A",
+        "MRT4xx/A",
+        "MHK23xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac Pro (2017)",
+      "family": "iMac Pro",
+      "identifiers": [
+        "iMacPro1,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQ2Y2xx/A",
+        "MHLV3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, 2017)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac18,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNE92xx/A",
+        "MNEA2xx/A",
+        "MNED2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 4K, 21.5-inch, 2017)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac18,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNDY2xx/A",
+        "MNE02xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, 2017)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac18,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MMQA2xx/A",
+        "MHK03xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Ventura",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, Late 2015)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac17,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MK462xx/A",
+        "MK472xx/A",
+        "MK482xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 4K, 21.5-inch, Late 2015)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac16,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MK452xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Late 2015)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac16,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MK142xx/A",
+        "MK442xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, Mid 2015)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac15,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MF885xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (Retina 5K, 27-inch, Late 2014)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac15,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MF886xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Mid 2014)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac14,4"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MF883xx/A",
+        "MG022xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (27-inch, Late 2013)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac14,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME086xx/A",
+        "ME088xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Late 2013)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac14,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME086xx/A",
+        "ME087xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (27-inch, Late 2012)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac13,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD095xx/A",
+        "MD096xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Late 2012)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac13,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD093xx/A",
+        "MD094xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (27-inch, Mid 2011)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac12,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC813xx/A",
+        "MC814xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Mid 2011)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac12,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC309xx/A",
+        "MC812xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (27-inch, Mid 2010)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac11,3"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC510xx/A",
+        "MC511xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Mid 2010)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac11,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC508xx/A",
+        "MC509xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (27-inch, Late 2009)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB952xx/A",
+        "MB953xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (21.5-inch, Late 2009)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB950xx/A",
+        "MC413xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (24-inch, Early 2009)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB418xx/A",
+        "MB419xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "iMac (20-inch, Early 2009)",
+      "family": "iMac",
+      "identifiers": [
+        "iMac9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB417xx/A",
+        "MC019xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/108054",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (M6)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Mac18,5"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MHQK4xx/A",
+        "MHQL4xx/A",
+        "MHQM4xx/A",
+        "MHQV4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M6"
+    },
+    {
+      "name": "Mac mini (M5 Pro)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Mac17,16"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MHQN4xx/A",
+        "MHQU4xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Pro"
+    },
+    {
+      "name": "Mac mini (2024)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Mac16,10",
+        "Mac16,11"
+      ],
+      "description": null,
+      "yearIntroduced": 2024,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MCX44xx/A",
+        "MCYT4xx/A",
+        "MDAP4xx/A",
+        "MDAQ4xx/A",
+        "MDAY4xx/A",
+        "MU9D3xx/A",
+        "MU9E3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (2023)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Mac14,3"
+      ],
+      "description": "This model has the M2 chip and includes two Thunderbolt 4 ports.",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MMFJ3xx/A",
+        "MMFK3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2"
+    },
+    {
+      "name": "Mac mini (2023)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Mac14,12"
+      ],
+      "description": "This model has the M2 Pro chip and includes four Thunderbolt 4 ports.",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNH73xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2 Pro"
+    },
+    {
+      "name": "Mac mini (M1, 2020)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2020,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGNR3xx/A",
+        "MGNT3xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1"
+    },
+    {
+      "name": "Mac mini (2018)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini8,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2018,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MRTR2xx/A",
+        "MRTT2xx/A",
+        "MXNF2xx/A",
+        "MXNG2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Sequoia",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Late 2014)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2014,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MGEM2xx/A",
+        "MGEN2xx/A",
+        "MGEQ2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Late 2012)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini6,1",
+        "Macmini6,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD387xx/A; MD388xx/A",
+        "MD389xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Catalina",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Mid 2011)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini5,1",
+        "Macmini5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2011,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC815xx/A; MC816xx/A",
+        "MC936xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Mid 2010)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini4,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC438xx/A",
+        "MC270xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Late 2009)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini3,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC238xx/A",
+        "MC239xx/A",
+        "MC408xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac mini (Early 2009)",
+      "family": "Mac mini",
+      "identifiers": [
+        "Macmini3,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB464xx/A",
+        "MB463xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102852",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Studio (M5 Max)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac17,14"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MHL64xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Max"
+    },
+    {
+      "name": "Mac Studio (M5 Ultra)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac17,15"
+      ],
+      "description": null,
+      "yearIntroduced": 2026,
+      "yearSource": "yearIntroducedField",
+      "partNumbers": [
+        "MHL74xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M5 Ultra"
+    },
+    {
+      "name": "Mac Studio (2025)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac16,9"
+      ],
+      "description": "Chip: M4 Max",
+      "yearIntroduced": 2025,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MU963xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M4 Max"
+    },
+    {
+      "name": "Mac Studio (2025)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac15,14"
+      ],
+      "description": "Chip: M3 Ultra",
+      "yearIntroduced": 2025,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MU973xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M3 Ultra"
+    },
+    {
+      "name": "Mac Studio (2023)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac14,13"
+      ],
+      "description": "Chip: M2 Max",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQH73xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2 Max"
+    },
+    {
+      "name": "Mac Studio (2023)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac14,14"
+      ],
+      "description": "Chip: M2 Ultra",
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MQH63xx/A"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M2 Ultra"
+    },
+    {
+      "name": "Mac Studio (2022)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac13,1"
+      ],
+      "description": "Chip: M1 Max",
+      "yearIntroduced": 2022,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MJMV2xx/a"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1 Max"
+    },
+    {
+      "name": "Mac Studio (2022)",
+      "family": "Mac Studio",
+      "identifiers": [
+        "Mac13,2"
+      ],
+      "description": "Chip: M1 Ultra",
+      "yearIntroduced": 2022,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MJMW3xx/a"
+      ],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102231",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": "M1 Ultra"
+    },
+    {
+      "name": "Mac Pro (2023)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "Mac14,8"
+      ],
+      "description": null,
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Rack, 2023)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "Mac14,8"
+      ],
+      "description": null,
+      "yearIntroduced": 2023,
+      "yearSource": "modelName",
+      "partNumbers": [],
+      "newestOperatingSystemText": "macOS 27 Golden Gate",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (2019)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [],
+      "newestOperatingSystemText": "macOS Tahoe 26",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Rack, 2019)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2019,
+      "yearSource": "modelName",
+      "partNumbers": [],
+      "newestOperatingSystemText": "macOS Tahoe 26",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Late 2013)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro6,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2013,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "ME253xx/A",
+        "MD878xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Mid 2012)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD770xx/A",
+        "MD771xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Mojave",
+      "newestOperatingSystemFootnote": "To install macOS Mojave on Mac Pro models from 2012, a Metal-capable graphics card is required. To install macOS Mojave on Mac Pro models from 2010, a Metal-capable graphics card is required.",
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro Server (Mid 2012)",
+      "family": "Mac Pro Server",
+      "identifiers": [
+        "MacPro5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2012,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MD772xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Mojave",
+      "newestOperatingSystemFootnote": "To install macOS Mojave on Mac Pro models from 2012, a Metal-capable graphics card is required. To install macOS Mojave on Mac Pro models from 2010, a Metal-capable graphics card is required.",
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Mid 2010)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC250xx/A",
+        "MC560xx/A",
+        "MC561xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Mojave",
+      "newestOperatingSystemFootnote": "To install macOS Mojave on Mac Pro models from 2012, a Metal-capable graphics card is required. To install macOS Mojave on Mac Pro models from 2010, a Metal-capable graphics card is required.",
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro Server (Mid 2010)",
+      "family": "Mac Pro Server",
+      "identifiers": [
+        "MacPro5,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC915xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Mojave",
+      "newestOperatingSystemFootnote": "To install macOS Mojave on Mac Pro models from 2012, a Metal-capable graphics card is required. To install macOS Mojave on Mac Pro models from 2010, a Metal-capable graphics card is required.",
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "Mac Pro (Early 2009)",
+      "family": "Mac Pro",
+      "identifiers": [
+        "MacPro4,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB871xx/A",
+        "MB535xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/102887",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (Retina, 12-inch, 2017)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook10,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2017,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MNYF2XX/A",
+        "MNYG2XX/A",
+        "MNYH2XX/A",
+        "MNYJ2XX/A",
+        "MNYK2XX/A",
+        "MNYL2XX/A",
+        "MNYM2XX/A",
+        "MNYN2XX/A"
+      ],
+      "newestOperatingSystemText": null,
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (Retina, 12-inch, Early 2016)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook9,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2016,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MLH72xx/A",
+        "MLH82xx/A",
+        "MLHA2xx/A",
+        "MLHC2xx/A",
+        "MLHE2xx/A",
+        "MLHF2xx/A",
+        "MMGL2xx/A",
+        "MMGM2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Monterey",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (Retina, 12-inch, Early 2015)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook8,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2015,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MF855xx/A",
+        "MF865xx/A",
+        "MJY32xx/A",
+        "MJY42xx/A",
+        "MK4M2xx/A",
+        "MK4N2xx/A"
+      ],
+      "newestOperatingSystemText": "macOS Big Sur",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (13-inch, Mid 2010)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook7,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2010,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC516xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra 10.13.6",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (13-inch, Late 2009)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook6,1"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC207xx/A"
+      ],
+      "newestOperatingSystemText": "macOS High Sierra 10.13.6",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (13-inch, Mid 2009)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MC240xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan 10.11.6",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook (13-inch, Early 2009)",
+      "family": "MacBook",
+      "identifiers": [
+        "MacBook5,2"
+      ],
+      "description": null,
+      "yearIntroduced": 2009,
+      "yearSource": "modelName",
+      "partNumbers": [
+        "MB881xx/A"
+      ],
+      "newestOperatingSystemText": "OS X El Capitan 10.11.6",
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/103257",
+      "sourceKind": "identifyPage",
+      "note": null,
+      "chipLabel": null
+    },
+    {
+      "name": "MacBook Neo (13-inch, A18 Pro)",
+      "family": "MacBook Neo",
+      "identifiers": [],
+      "description": "Apple A18 Pro chip. Year introduced: 2026.",
+      "yearIntroduced": 2026,
+      "yearSource": "techSpecsYearIntroduced",
+      "partNumbers": [],
+      "newestOperatingSystemText": null,
+      "newestOperatingSystemFootnote": null,
+      "sourceURL": "https://support.apple.com/en-us/126322",
+      "sourceKind": "techSpecsWithoutModelIdentifier",
+      "note": "Apple's MacBook Neo tech specs page states the A18 Pro chip and year introduced 2026. That page does not publish an hw.model identifier. The marketing name is the compatibility-list name.",
+      "chipLabel": "A18 Pro"
+    }
+  ],
+  "releases": [
+    {
+      "id": "27",
+      "marketingName": "macOS 27 Golden Gate",
+      "latestBuild": "27.2",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/127255",
+      "compatibilityPagePublished": "November 05, 2026",
+      "listedModelNames": [
+        "MacBook Pro (14-inch, M6)",
+        "MacBook Pro (14-inch PROLED XDR, M5 Pro or M5 Max)",
+        "MacBook Pro (16-inch PROLED XDR, M5 Pro or M5 Max)",
+        "MacBook Pro (16-inch, M5 Pro or M5 Max)",
+        "MacBook Pro (14-inch, M5 Pro or M5 Max)",
+        "MacBook Pro (14-inch, M5)",
+        "MacBook Pro (16-inch, 2024)",
+        "MacBook Pro (14-inch, 2024)",
+        "MacBook Pro (16-inch, 2023)",
+        "MacBook Pro (14-inch, 2023)",
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Air (15-inch, M5)",
+        "MacBook Air (13-inch, M5)",
+        "MacBook Air (15-inch, M4, 2025)",
+        "MacBook Air (13-inch, M4, 2025)",
+        "MacBook Air (15-inch, M3, 2024)",
+        "MacBook Air (13-inch, M3, 2024)",
+        "MacBook Air (15-inch, M2, 2023)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Neo (13-inch, A18 Pro)",
+        "iMac (24-inch, M6, Four ports)",
+        "iMac (24-inch, M6, Two ports)",
+        "iMac (24-inch, 2024, Four ports)",
+        "iMac (24-inch, 2024, Two ports)",
+        "iMac (24-inch, 2023, Four ports)",
+        "iMac (24-inch, 2023, Two ports)",
+        "iMac (24-inch, M1, 2021)",
+        "Mac mini (M6 or M5 Pro)",
+        "Mac mini (2024)",
+        "Mac mini (2023)",
+        "Mac mini (M1, 2020)",
+        "Mac Studio (M5 Max or M5 Ultra)",
+        "Mac Studio (2025)",
+        "Mac Studio (2023)",
+        "Mac Studio (2022)",
+        "Mac Pro (2023)"
+      ],
+      "appleSiliconBlanket": {
+        "statement": "macOS 27 is compatible with any Mac with Apple silicon, which includes any Mac with an M-series chip or A-series chip.",
+        "url": "https://support.apple.com/en-us/127455",
+        "published": "September 14, 2026",
+        "alsoStatedOn": "https://support.apple.com/en-us/127255"
+      },
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "noneOnDownloadArticle",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": null,
+        "note": "Apple's download article does not publish an App Store link or a disk image for this version. Software Update on the Mac shows only updates compatible with that Mac."
+      }
+    },
+    {
+      "id": "26",
+      "marketingName": "macOS Tahoe 26",
+      "latestBuild": "26.7.2",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/122867",
+      "compatibilityPagePublished": "September 14, 2026",
+      "listedModelNames": [
+        "MacBook Pro (16-inch, M5 Pro or M5 Max)",
+        "MacBook Pro (14-inch, M5 Pro or M5 Max)",
+        "MacBook Pro (14-inch, M5)",
+        "MacBook Pro (16-inch, 2024)",
+        "MacBook Pro (14-inch, 2024)",
+        "MacBook Pro (16-inch, 2023)",
+        "MacBook Pro (14-inch, 2023)",
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Air (15-inch, M5)",
+        "MacBook Air (13-inch, M5)",
+        "MacBook Air (15-inch, M4, 2025)",
+        "MacBook Air (13-inch, M4, 2025)",
+        "MacBook Air (15-inch, M3, 2024)",
+        "MacBook Air (13-inch, M3, 2024)",
+        "MacBook Air (15-inch, M2, 2023)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Neo (13-inch, A18 Pro)",
+        "iMac (24-inch, 2024, Four ports)",
+        "iMac (24-inch, 2024, Two ports)",
+        "iMac (24-inch, 2023, Four ports)",
+        "iMac (24-inch, 2023, Two ports)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "Mac mini (2024)",
+        "Mac mini (2023)",
+        "Mac mini (M1, 2020)",
+        "Mac Studio (2025)",
+        "Mac Studio (2023)",
+        "Mac Studio (2022)",
+        "Mac Pro (2023)",
+        "Mac Pro (2019)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "noneOnDownloadArticle",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": null,
+        "note": "Apple's download article does not publish an App Store link or a disk image for this version. Software Update on the Mac shows only updates compatible with that Mac."
+      }
+    },
+    {
+      "id": "15",
+      "marketingName": "macOS Sequoia 15",
+      "latestBuild": "15.8.2",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/120282",
+      "compatibilityPagePublished": "September 15, 2025",
+      "listedModelNames": [
+        "MacBook Pro (16-inch, 2024)",
+        "MacBook Pro (14-inch, 2024)",
+        "MacBook Pro (16-inch, 2023)",
+        "MacBook Pro (14-inch, 2023)",
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Air (15-inch, M4, 2025)",
+        "MacBook Air (13-inch, M4, 2025)",
+        "MacBook Air (15-inch, M3, 2024)",
+        "MacBook Air (13-inch, M3, 2024)",
+        "MacBook Air (15-inch, M2, 2023)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "iMac (24-inch, 2024, Four ports)",
+        "iMac (24-inch, 2024, Two ports)",
+        "iMac (24-inch, 2023, Four ports)",
+        "iMac (24-inch, 2023, Two ports)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac Pro (2017)",
+        "Mac mini (2024)",
+        "Mac mini (2023)",
+        "Mac mini (M1, 2020)",
+        "Mac mini (2018)",
+        "Mac Studio (2025)",
+        "Mac Studio (2023)",
+        "Mac Studio (2022)",
+        "Mac Pro (2023)",
+        "Mac Pro (2019)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-sequoia/id6596773750?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-sequoia/id6596773750",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "14",
+      "marketingName": "macOS Sonoma 14",
+      "latestBuild": "14.8.9",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/105113",
+      "compatibilityPagePublished": "September 16, 2024",
+      "listedModelNames": [
+        "MacBook Pro (16-inch, 2023)",
+        "MacBook Pro (14-inch, 2023)",
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Air (15-inch, M3, 2024)",
+        "MacBook Air (13-inch, M3, 2024)",
+        "MacBook Air (15-inch, M2, 2023)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "MacBook Air (Retina, 13-inch, 2019)",
+        "MacBook Air (Retina, 13-inch, 2018)",
+        "iMac (24-inch, 2023)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac Pro (2017)",
+        "Mac mini (2023)",
+        "Mac mini (M1, 2020)",
+        "Mac mini (2018)",
+        "Mac Studio (2023)",
+        "Mac Studio (2022)",
+        "Mac Pro (2023)",
+        "Mac Pro (2019)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-sonoma/id6450717509?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-sonoma/id6450717509",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "13",
+      "marketingName": "macOS Ventura 13",
+      "latestBuild": "13.7.8",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/102861",
+      "compatibilityPagePublished": "September 17, 2025",
+      "listedModelNames": [
+        "MacBook Pro (16-inch, 2023)",
+        "MacBook Pro (14-inch, 2023)",
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2017)",
+        "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)",
+        "MacBook Air (15-inch, M2, 2023)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "MacBook Air (Retina, 13-inch, 2019)",
+        "MacBook Air (Retina, 13-inch, 2018)",
+        "MacBook (Retina, 12-inch, 2017)",
+        "iMac Pro (2017)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac (Retina 5K, 27-inch, 2017)",
+        "iMac (Retina 4K, 21.5-inch, 2017)",
+        "iMac (21.5-inch, 2017)",
+        "Mac mini (2023)",
+        "Mac mini (M1, 2020)",
+        "Mac mini (2018)",
+        "Mac Studio (2023)",
+        "Mac Studio (2022)",
+        "Mac Pro (2023)",
+        "Mac Pro (2019)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-ventura/id1638787999?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-ventura/id1638787999",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "12",
+      "marketingName": "macOS Monterey 12",
+      "latestBuild": "12.7.6",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/103260",
+      "compatibilityPagePublished": "June 05, 2025",
+      "listedModelNames": [
+        "MacBook Pro (13-inch, M2, 2022)",
+        "MacBook Pro (16-inch, 2021)",
+        "MacBook Pro (14-inch, 2021)",
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2017)",
+        "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2016)",
+        "MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)",
+        "MacBook Pro (Retina, 15-inch, Mid 2015)",
+        "MacBook Pro (Retina, 13-inch, Early 2015)",
+        "MacBook Air (M2, 2022)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "MacBook Air (Retina, 13-inch, 2019)",
+        "MacBook Air (Retina, 13-inch, 2018)",
+        "MacBook Air (13-inch, 2017)",
+        "MacBook Air (13-inch, Early 2015)",
+        "MacBook Air (11-inch, Early 2015)",
+        "MacBook (Retina, 12-inch, 2017)",
+        "MacBook (Retina, 12-inch, Early 2016)",
+        "iMac Pro (2017)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac (Retina 5K, 27-inch, 2017)",
+        "iMac (Retina 4K, 21.5-inch, 2017)",
+        "iMac (21.5-inch, 2017)",
+        "iMac (Retina 5K, 27-inch, Late 2015)",
+        "iMac (Retina 4K, 21.5-inch, Late 2015)",
+        "iMac (21.5-inch, Late 2015)",
+        "Mac mini (M1, 2020)",
+        "Mac mini (2018)",
+        "Mac mini (Late 2014)",
+        "Mac Studio (2022)",
+        "Mac Pro (2019)",
+        "Mac Pro (Late 2013)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-monterey/id1576738294?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-monterey/id1576738294",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "11",
+      "marketingName": "macOS Big Sur 11",
+      "latestBuild": "11.7.11",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/103111",
+      "compatibilityPagePublished": "June 05, 2025",
+      "listedModelNames": [
+        "MacBook Pro (13-inch, M1, 2020)",
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2017)",
+        "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2016)",
+        "MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)",
+        "MacBook Pro (Retina, 15-inch, Mid 2015)",
+        "MacBook Pro (Retina, 13-inch, Early 2015)",
+        "MacBook Pro (Retina, 15-inch, Mid 2014)",
+        "MacBook Pro (Retina, 13-inch, Mid 2014)",
+        "MacBook Pro (Retina, 15-inch, Late 2013)",
+        "MacBook Pro (Retina, 13-inch, Late 2013)",
+        "MacBook Air (M1, 2020)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "MacBook Air (Retina, 13-inch, 2019)",
+        "MacBook Air (Retina, 13-inch, 2018)",
+        "MacBook Air (13-inch, 2017)",
+        "MacBook Air (13-inch, Early 2015)",
+        "MacBook Air (11-inch, Early 2015)",
+        "MacBook Air (13-inch, Early 2014)",
+        "MacBook Air (11-inch, Early 2014)",
+        "MacBook Air (13-inch, Mid 2013)",
+        "MacBook Air (11-inch, Mid 2013)",
+        "MacBook (Retina, 12-inch, 2017)",
+        "MacBook (Retina, 12-inch, Early 2016)",
+        "MacBook (Retina, 12-inch, Early 2015)",
+        "iMac Pro (2017)",
+        "iMac (24-inch, M1, 2021)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac (Retina 5K, 27-inch, 2017)",
+        "iMac (Retina 4K, 21.5-inch, 2017)",
+        "iMac (21.5-inch, 2017)",
+        "iMac (Retina 5K, 27-inch, Late 2015)",
+        "iMac (Retina 4K, 21.5-inch, Late 2015)",
+        "iMac (21.5-inch, Late 2015)",
+        "iMac (Retina 5K, 27-inch, Mid 2015)",
+        "iMac (Retina 5K, 27-inch, Late 2014)",
+        "iMac (21.5-inch, Mid 2014)",
+        "Mac mini (M1, 2020)",
+        "Mac mini (2018)",
+        "Mac mini (Late 2014)",
+        "Mac Pro (2019)",
+        "Mac Pro (Late 2013)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-big-sur/id1526878132?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-big-sur/id1526878132",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "10.15",
+      "marketingName": "macOS Catalina 10.15",
+      "latestBuild": "10.15.8",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": "https://support.apple.com/en-us/102765",
+      "compatibilityPagePublished": "June 05, 2025",
+      "listedModelNames": [
+        "MacBook Pro (13-inch, 2020, Two Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)",
+        "MacBook Pro (16-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2019)",
+        "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2018)",
+        "MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2017)",
+        "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)",
+        "MacBook Pro (15-inch, 2016)",
+        "MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)",
+        "MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)",
+        "MacBook Pro (Retina, 15-inch, Mid 2015)",
+        "MacBook Pro (Retina, 13-inch, Early 2015)",
+        "MacBook Pro (Retina, 15-inch, Mid 2014)",
+        "MacBook Pro (Retina, 13-inch, Mid 2014)",
+        "MacBook Pro (Retina, 15-inch, Late 2013)",
+        "MacBook Pro (Retina, 15-inch, Early 2013)",
+        "MacBook Pro (Retina, 13-inch, Late 2013)",
+        "MacBook Pro (Retina, 13-inch, Early 2013)",
+        "MacBook Pro (Retina, 15-inch, Mid 2012)",
+        "MacBook Pro (15-inch, Mid 2012)",
+        "MacBook Pro (Retina, 13-inch, Late 2012)",
+        "MacBook Pro (13-inch, Mid 2012)",
+        "MacBook Air (Retina, 13-inch, 2020)",
+        "MacBook Air (Retina, 13-inch, 2019)",
+        "MacBook Air (Retina, 13-inch, 2018)",
+        "MacBook Air (13-inch, 2017)",
+        "MacBook Air (13-inch, Early 2015)",
+        "MacBook Air (11-inch, Early 2015)",
+        "MacBook Air (13-inch, Early 2014)",
+        "MacBook Air (11-inch, Early 2014)",
+        "MacBook Air (13-inch, Mid 2013)",
+        "MacBook Air (11-inch, Mid 2013)",
+        "MacBook Air (13-inch, Mid 2012)",
+        "MacBook Air (11-inch, Mid 2012)",
+        "MacBook (Retina, 12-inch, 2017)",
+        "MacBook (Retina, 12-inch, Early 2016)",
+        "MacBook (Retina, 12-inch, Early 2015)",
+        "iMac Pro (2017)",
+        "iMac (Retina 5K, 27-inch, 2020)",
+        "iMac (Retina 5K, 27-inch, 2019)",
+        "iMac (Retina 4K, 21.5-inch, 2019)",
+        "iMac (Retina 5K, 27-inch, 2017)",
+        "iMac (Retina 4K, 21.5-inch, 2017)",
+        "iMac (21.5-inch, 2017)",
+        "iMac (Retina 5K, 27-inch, Late 2015)",
+        "iMac (Retina 4K, 21.5-inch, Late 2015)",
+        "iMac (21.5-inch, Late 2015)",
+        "iMac (Retina 5K, 27-inch, Mid 2015)",
+        "iMac (Retina 5K, 27-inch, Late 2014)",
+        "iMac (21.5-inch, Mid 2014)",
+        "iMac (27-inch, Late 2013)",
+        "iMac (21.5-inch, Late 2013)",
+        "iMac (27-inch, Late 2012)",
+        "iMac (21.5-inch, Late 2012)",
+        "Mac mini (2018)",
+        "Mac mini (Late 2014)",
+        "Mac mini (Late 2012)",
+        "Mac Pro (2019)",
+        "Mac Pro (Late 2013)"
+      ],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": true,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-catalina/id1466841314?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-catalina/id1466841314",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "10.14",
+      "marketingName": "macOS Mojave 10.14",
+      "latestBuild": "10.14.6",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-mojave/id1398502828?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-mojave/id1398502828",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "10.13",
+      "marketingName": "macOS High Sierra 10.13",
+      "latestBuild": "10.13.6",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "appStore",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": "macappstores://apps.apple.com/app/macos-high-sierra/id1246284741?mt=12",
+        "httpsURL": "https://apps.apple.com/app/macos-high-sierra/id1246284741",
+        "diskImageURL": null,
+        "note": "App Store link published on Apple's download article. The https address is the same product id with the https scheme. Opening it does not mean this Mac is currently offered the installer."
+      }
+    },
+    {
+      "id": "10.12",
+      "marketingName": "macOS Sierra 10.12",
+      "latestBuild": "10.12.6",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "diskImage",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": "http://updates-http.cdn-apple.com/2019/cert/061-39476-20191023-48f365f4-0015-4c41-9f44-39d3d2aca067/InstallOS.dmg",
+        "note": "Disk image URL published on Apple's download article. This catalog has no per-model compatibility page for this version."
+      }
+    },
+    {
+      "id": "10.11",
+      "marketingName": "OS X El Capitan 10.11",
+      "latestBuild": "10.11.6",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "diskImage",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": "http://updates-http.cdn-apple.com/2019/cert/061-41424-20191024-218af9ec-cf50-4516-9011-228c78eda3d2/InstallMacOSX.dmg",
+        "note": "Disk image URL published on Apple's download article. This catalog has no per-model compatibility page for this version."
+      }
+    },
+    {
+      "id": "10.10",
+      "marketingName": "OS X Yosemite 10.10",
+      "latestBuild": "10.10.5",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "diskImage",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": "http://updates-http.cdn-apple.com/2019/cert/061-41343-20191023-02465f92-3ab5-4c92-bfe2-b725447a070d/InstallMacOSX.dmg",
+        "note": "Disk image URL published on Apple's download article. This catalog has no per-model compatibility page for this version."
+      }
+    },
+    {
+      "id": "10.9",
+      "marketingName": "OS X Mavericks 10.9",
+      "latestBuild": "10.9.5",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "noneOnDownloadArticle",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": null,
+        "note": "Apple's download article does not publish an App Store link or a disk image for this version. Software Update on the Mac shows only updates compatible with that Mac."
+      }
+    },
+    {
+      "id": "10.8",
+      "marketingName": "OS X Mountain Lion 10.8",
+      "latestBuild": "10.8.5",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "diskImage",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": "https://updates.cdn-apple.com/2021/macos/031-0627-20210614-90D11F33-1A65-42DD-BBEA-E1D9F43A6B3F/InstallMacOSX.dmg",
+        "note": "Disk image URL published on Apple's download article. This catalog has no per-model compatibility page for this version."
+      }
+    },
+    {
+      "id": "10.7",
+      "marketingName": "OS X Lion 10.7",
+      "latestBuild": "10.7.5",
+      "latestBuildSourceURL": "https://support.apple.com/en-us/109033",
+      "latestBuildSourcePublished": "October 26, 2026",
+      "compatibilityPageURL": null,
+      "compatibilityPagePublished": null,
+      "listedModelNames": [],
+      "appleSiliconBlanket": null,
+      "hasPerModelCompatibilityPage": false,
+      "download": {
+        "kind": "diskImage",
+        "articleURL": "https://support.apple.com/en-us/102662",
+        "articlePublished": "September 14, 2026",
+        "macAppStoreURL": null,
+        "httpsURL": null,
+        "diskImageURL": "https://updates.cdn-apple.com/2021/macos/041-7683-20210614-E610947E-C7CE-46EB-8860-D26D71F0D3EA/InstallMacOSX.dmg",
+        "note": "Disk image URL published on Apple's download article. This catalog has no per-model compatibility page for this version."
+      }
+    }
+  ],
+  "rules": {
+    "appleSiliconArticleURL": "https://support.apple.com/en-us/116943",
+    "appleSiliconArticlePublished": "May 12, 2026",
+    "t2ArticleURL": "https://support.apple.com/en-us/103265",
+    "t2ArticlePublished": "May 27, 2026",
+    "bootableInstallerArticleURL": "https://support.apple.com/en-us/101578",
+    "bootableInstallerArticlePublished": "September 14, 2026",
+    "downloadArticleURL": "https://support.apple.com/en-us/102662",
+    "downloadArticlePublished": "September 14, 2026",
+    "softwareUpdateHelpURL": "https://support.apple.com/guide/mac-help/software-update-settings-on-mac-mchla7037245/mac",
+    "softwareUpdateSettingsURL": "x-help-action://openPrefPane?bundleId=com.apple.Software-Update-Settings.extension",
+    "upgrade27URL": "https://support.apple.com/en-us/127455",
+    "voiceOverGuideURL": "https://support.apple.com/guide/voiceover/turn-voiceover-on-or-off-vo2682/mac",
+    "appStoreGuidelinesURL": "https://developer.apple.com/app-store/review/guidelines/",
+    "appStoreGuidelinesUpdated": "October 16, 2026"
+  }
+}
