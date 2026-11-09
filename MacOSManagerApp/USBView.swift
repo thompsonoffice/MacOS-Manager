@@ -8,8 +8,9 @@ struct USBView: View {
         VStack(alignment: .leading, spacing: 16) {
             SectionHeading(
                 title: "Install",
-                subtitle: "Two choices, as with a media creation tool: install on this Mac, or create a bootable USB installer. The USB is an installer, not a portable copy of macOS."
+                subtitle: "Download an installer Apple is still serving for this Mac, install it on this Mac, or create a bootable USB. The USB is an installer, not a portable copy of macOS."
             )
+            .onAppear { session.prepareHost() }
             versionSection
             installerSection
             actionSection
@@ -32,22 +33,49 @@ struct USBView: View {
         Text("Version")
             .font(.title2)
             .accessibilityAddTraits(.isHeader)
-        if let report = session.report, report.found {
-            let offered = InstallWorkflow.selectableVersions(report)
-            if offered.isEmpty {
-                Text("No macOS version in this catalog is offered for the Mac you looked up.")
+        Text(hostSummary)
+        if let host = session.hostReport, let lookup = session.report,
+           let difference = InstallerOffers.differentMacExplanation(host: host, lookup: lookup) {
+            Text(difference)
+        }
+        if session.didReadLiveCatalog {
+            if session.installerOffers.isEmpty {
+                Text("Apple's live catalog did not include an installer this Mac can run.")
             } else {
                 Picker("macOS version", selection: $session.selectedReleaseID) {
-                    ForEach(offered) { version in
-                        Text("\(version.marketingName). \(version.claim.label).").tag(version.releaseID)
+                    ForEach(session.installerOffers) { offer in
+                        Text(offerLabel(offer)).tag(offer.releaseID)
                     }
                 }
                 .pickerStyle(.radioGroup)
-                .accessibilityHint("Only versions Apple lists for this Mac, or macOS 27 when Apple's Apple silicon sentence applies. This does not download anything.")
+                .accessibilityHint("Only versions in Apple's live catalog that this Mac can run. Choosing one does not start the download.")
+            }
+            ForEach(session.installerRefusals) { refusal in
+                Text(refusal.plainLanguage)
             }
         } else {
-            Text("Look up a Mac on Identify this Mac before choosing a version.")
+            Text("Check Apple's catalog before downloading. The list is the installers Apple is serving right now, limited to versions this Mac can run.")
         }
+        Button("Check Apple's catalog") { session.refreshLiveCatalog() }
+            .disabled(session.isWorking)
+            .accessibilityHint("Reads Apple's software catalog. Does not download the installer and does not erase a disk.")
+    }
+
+    private var hostSummary: String {
+        guard let host = session.hostReport else {
+            return "Installers are offered for this Mac, after its model is read."
+        }
+        if host.found {
+            return "This Mac is \(host.records.map(\.name).joined(separator: " and "))."
+        }
+        return "This Mac's model is not available yet. No installer is offered until it is."
+    }
+
+    private func offerLabel(_ offer: InstallerOffer) -> String {
+        if let build = offer.build, !build.isEmpty {
+            return "\(offer.marketingName), version \(offer.version), build \(build)."
+        }
+        return "\(offer.marketingName), version \(offer.version)."
     }
 
     private var installerSection: some View {
@@ -64,9 +92,9 @@ struct USBView: View {
             if let installer = session.checkedInstaller {
                 Text("Checked \(installer.displayName). Tool: \(installer.createInstallMediaPath).")
             }
-            Button("Download this version with softwareupdate") { session.downloadSelectedInstaller() }
-                .disabled(session.isWorking)
-                .accessibilityHint("Runs Apple's softwareupdate with the catalog build number as a separate argument. Does not erase a disk.")
+            Button("Download and install this version") { session.downloadSelectedInstaller() }
+                .disabled(session.isWorking || (session.didReadLiveCatalog && session.installerOffers.isEmpty))
+                .accessibilityHint("Downloads Apple's InstallAssistant package, checks that pkgutil shows an Apple Software signature, then installs it into Applications. An administrator password is requested for that install. This does not erase a disk. If the download fails, softwareupdate is tried next.")
         }
     }
 

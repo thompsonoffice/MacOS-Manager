@@ -151,6 +151,21 @@ public enum InstallWorkflow {
         ))
     }
 
+    /// softwareupdate fallback. The version must already be an official token from the live catalog or the bundled catalog.
+    public static func softwareUpdateCommand(
+        version: String,
+        tools: ToolPaths = ToolPaths()
+    ) -> Result<ArgumentVector, WorkflowError> {
+        guard isOfficialVersionToken(version) else {
+            return .failure(.versionStringRejected)
+        }
+        return .success(ArgumentVector(
+            executable: tools.softwareupdate,
+            arguments: ["--fetch-full-installer", "--full-installer-version", version],
+            needsAdministratorPrompt: false
+        ))
+    }
+
     public static func diskutilList(tools: ToolPaths = ToolPaths()) -> ArgumentVector {
         ArgumentVector(
             executable: tools.diskutil,

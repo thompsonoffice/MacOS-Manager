@@ -83,7 +83,7 @@ public struct CompatibilityReport: Equatable, Sendable {
         "The macOS version that originally shipped on this Mac is not in this catalog. Apple's identify pages used here do not state it."
 
     public static let installersCurrentlyOfferedText =
-        "Which full installers Apple is offering this Mac today is unknown. Software Update on that Mac shows only updates compatible with it. This prototype does not run softwareupdate."
+        "Which full installers Apple is offering this Mac today is read on the Install screen from Apple's live catalog. This lookup does not run softwareupdate."
 
     public static func build(
         catalog: Catalog,

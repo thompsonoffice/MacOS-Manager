@@ -10,14 +10,15 @@ This is not a finished product. The Install screen can open Apple's installer fo
 - Says whether that Mac is Apple silicon or Intel, using Apple's published introduction rules, and whether Apple lists it as a T2 Mac.
 - Shows macOS Catalina 10.15 through macOS 27. A version counts only when Apple's compatibility page uses the exact model name.
 - For macOS 27, also applies Apple's statement that macOS 27 is compatible with any Mac with Apple silicon. The screen says when that sentence is the reason.
-- Opens Apple's Software Update instructions, App Store links, and disk-image links. It does not download the installer.
+- Opens Apple's Software Update instructions, App Store links, and disk-image links.
+- On Install, reads Apple's live software catalog and downloads an InstallAssistant package from Apple's CDN when that version is still served and this Mac can run it. The package is checked with `pkgutil --check-signature` and installed into Applications. If that download fails, `softwareupdate --fetch-full-installer` is tried.
 - On a Mac, can try `sysctl` `hw.model` and `hw.machine`. That call has not been run here, and it has not been tried inside a signed App Sandbox.
 
 If Apple's pages disagree, or a name is only similar, the result says so. It does not guess. The macOS version that shipped from the factory is not in this catalog. The installers Software Update would offer a particular Mac today are also unknown here.
 
 ## What this copy does not do
 
-- `softwareupdate`, `diskutil`, and `createinstallmedia` are prepared as argument lists. They have not been run against a real disk or Apple's tools in this workspace.
+- `softwareupdate`, `diskutil`, `pkgutil`, `installer`, and `createinstallmedia` are prepared as argument lists. They have not been run against a real disk or Apple's tools in this workspace. The catalog parser is tested with saved catalog text, not by downloading a full installer here.
 - App Store Review Guideline 2.4.5(v) says a Mac App Store app may not request root. Apple's USB command needs an administrator password. This prototype does not claim a USB writer is eligible for the store, and it does not choose between an App Store edition and a direct download.
 - No Apple installer is bundled. No signing certificate, payment, or App Store submission is included.
 - Versions older than Catalina have no per-model list here. Apple still publishes some older download links. Those links are not treated as proof that a Mac can run that version.
@@ -38,7 +39,7 @@ These tests were run on this machine. SwiftUI was not compiled.
 swift test
 ```
 
-Result on 2026-11-08, Swift 6.2.3, Ubuntu 24.04, x86_64: 29 tests, 0 failures. Those tests cover the catalog and the install workflow. They do not compile SwiftUI.
+Result on 2026-11-09, Swift 6.2.3, Ubuntu 24.04, x86_64: 43 tests, 0 failures. Those tests cover the catalog, the install workflow, the live-catalog parser, and the softwareupdate error mapping. They do not compile SwiftUI.
 
 The toolchain used here was the official Swift 6.2.3 release for Ubuntu 24.04 from swift.org. It has no macOS SDK.
 

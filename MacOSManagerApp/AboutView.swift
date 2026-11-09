@@ -22,11 +22,11 @@ struct AboutView: View {
                 Text("What you can do here")
                     .font(.title2)
                     .accessibilityAddTraits(.isHeader)
-                Text("Look up a model identifier, Apple's model name, or a part number. Choose a macOS version Apple lists for that Mac. On Install, check a full installer, ask softwareupdate for that catalog build, open Apple's installer window, or create a USB after you type the volume name.")
+                Text("Look up a model identifier, Apple's model name, or a part number. On Install, read Apple's live catalog and download a version that catalog still serves and that this Mac can run. The download is checked with pkgutil, then installed into Applications. You can also open Apple's installer window, or create a USB after you type the volume name.")
                 Text("What is still unverified")
                     .font(.title2)
                     .accessibilityAddTraits(.isHeader)
-                Text("The intended download is an unsigned installer package that copies this app into Applications. It is not a Mac App Store app, and it is not Developer ID signed or notarized. No package has been built in this workspace. Gatekeeper's reaction to that package has not been tested. VoiceOver has not been heard. Apple's createinstallmedia has not been run on a real disk. Install on this Mac only opens Apple's window. It does not erase the running Mac in the background.")
+                Text("The copy of this app is an unsigned package that installs into Applications. It is not a Mac App Store app, and it is not Developer ID signed or notarized. Gatekeeper, VoiceOver, pkgutil, the full installer download, and createinstallmedia have not been exercised on a physical Mac in this workspace. Install on this Mac opens Apple's window after the installer app is in Applications. It does not erase the running Mac in the background.")
                 Text("The factory macOS, and the installers Software Update would offer this Mac today, are separate from the hardware list. If a fact is missing or two Apple records disagree, the result says unknown or shows both records.")
             }
             if let retrieved = session.catalog?.retrieved {

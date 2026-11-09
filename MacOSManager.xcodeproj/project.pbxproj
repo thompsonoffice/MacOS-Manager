@@ -17,6 +17,7 @@
 		A10000000000000000000077 /* CompatibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000057 /* CompatibilityView.swift */; };
 		A10000000000000000000078 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000058 /* DownloadView.swift */; };
 		A10000000000000000000079 /* USBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000059 /* USBView.swift */; };
+		A1000000000000000000007A /* AppleInstallerFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000005A /* AppleInstallerFetch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A10000000000000000000057 /* CompatibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityView.swift; sourceTree = "<group>"; };
 		A10000000000000000000058 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		A10000000000000000000059 /* USBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBView.swift; sourceTree = "<group>"; };
+		A1000000000000000000005A /* AppleInstallerFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleInstallerFetch.swift; sourceTree = "<group>"; };
 		A10000000000000000000090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10000000000000000000091 /* MacOSManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSManager.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				A10000000000000000000057 /* CompatibilityView.swift */,
 				A10000000000000000000058 /* DownloadView.swift */,
 				A10000000000000000000059 /* USBView.swift */,
+				A1000000000000000000005A /* AppleInstallerFetch.swift */,
 				A10000000000000000000090 /* Info.plist */,
 				A10000000000000000000091 /* MacOSManager.entitlements */,
 			);
@@ -158,6 +161,7 @@
 				A10000000000000000000077 /* CompatibilityView.swift in Sources */,
 				A10000000000000000000078 /* DownloadView.swift in Sources */,
 				A10000000000000000000079 /* USBView.swift in Sources */,
+				A1000000000000000000007A /* AppleInstallerFetch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +207,7 @@
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MacOSManagerApp/Info.plist;
@@ -213,7 +217,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = local.review.MacOSManager;
 				PRODUCT_NAME = MacOSManager;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -230,7 +234,7 @@
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.1;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MacOSManagerApp/Info.plist;
@@ -240,7 +244,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = local.review.MacOSManager;
 				PRODUCT_NAME = MacOSManager;
 				SWIFT_EMIT_LOC_STRINGS = YES;
