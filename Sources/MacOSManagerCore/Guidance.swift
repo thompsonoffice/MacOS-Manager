@@ -55,7 +55,7 @@ public struct DownloadGuidance: Equatable, Sendable {
             steps: [
                 "Use Spotlight to search for Software Update, or choose Apple menu, System Settings, General, then Software Update. Apple's macOS 27 article and Mac user guide both describe those steps.",
                 "Software Update shows only updates that are compatible with that Mac. A version listed as hardware-compatible in this catalog can still be absent from Software Update.",
-                "If Apple published an App Store or disk image link for this version, it is shown separately. This app does not download the installer.",
+                "The Install screen downloads Apple's InstallAssistant package when that version is in Apple's live catalog and this Mac can run it. This page does not start that download. If Apple published an App Store or disk image link, it is shown separately.",
             ],
             note: download.note
         )
@@ -85,7 +85,7 @@ public struct BootableInstallerStatus: Equatable, Sendable {
             guidelineURL: catalog.rules.appStoreGuidelinesURL,
             guidelineUpdated: catalog.rules.appStoreGuidelinesUpdated,
             explanation: [
-                "The Install screen can ask Apple's softwareupdate for a catalog build, open a checked Install macOS app, or run createinstallmedia after the typed volume name matches. Startup disks stay blocked.",
+                "The Install screen downloads Apple's InstallAssistant package from the live catalog, checks its signature, and installs it into Applications. It can also open a checked Install macOS app, or run createinstallmedia after the typed volume name matches. Startup disks stay blocked.",
                 "That command path has not been run against Apple's real createinstallmedia or a physical disk. macOS shows the administrator password prompt itself. This app does not store the password.",
                 "The intended download is a direct .app, not a Mac App Store build. Guideline 2.4.5(v), updated \(catalog.rules.appStoreGuidelinesUpdated), still forbids root in a store app, which is why the USB step is only in the direct build.",
                 "Apple's article, published \(catalog.rules.bootableInstallerArticlePublished), says the volume is erased when you type Y. This app types that only after the volume name matches.",

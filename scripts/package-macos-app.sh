@@ -129,7 +129,7 @@ pkgbuild \
   --root "$STAGE" \
   --install-location /Applications \
   --identifier local.review.MacOSManager.pkg \
-  --version 0.1.0 \
+  --version 0.1.1 \
   --component-plist "$COMPONENT" \
   "$PKG"
 echo "PKG: $PKG"

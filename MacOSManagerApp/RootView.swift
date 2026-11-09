@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject private var session: Session
+    @AccessibilityFocusState private var statusFocused: Bool
 
     var body: some View {
         Group {
@@ -20,7 +21,8 @@ struct RootView: View {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 20) {
                             screenContent
-                            StatusBlock(message: session.statusMessage)
+                            StatusBlock(message: session.statusMessage, rawDetail: session.statusDetail)
+                                .accessibilityFocused($statusFocused)
                         }
                         .frame(maxWidth: 760, alignment: .leading)
                         .padding(24)
@@ -32,6 +34,11 @@ struct RootView: View {
         .onAppear { session.load() }
         .onChange(of: session.screen) { _, screen in
             session.announce(screen.title + ". " + screen.hint)
+        }
+        .onChange(of: session.statusDetail) { _, detail in
+            if let detail, !detail.isEmpty {
+                statusFocused = true
+            }
         }
     }
 
@@ -83,6 +90,7 @@ struct LoadFailureView: View {
 
 struct StatusBlock: View {
     let message: String
+    var rawDetail: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -91,9 +99,21 @@ struct StatusBlock: View {
                 .accessibilityAddTraits(.isHeader)
             Text(message)
                 .textSelection(.enabled)
+                .accessibilityLabel("Status. \(message)")
+                .accessibilityAddTraits(.updatesFrequently)
+                .focusable(true)
+            if let rawDetail, !rawDetail.isEmpty {
+                DisclosureGroup("Technical detail") {
+                    Text(rawDetail)
+                        .font(.body.monospaced())
+                        .textSelection(.enabled)
+                        .accessibilityLabel("Technical detail")
+                        .accessibilityValue(rawDetail)
+                }
+                .accessibilityHint("The original message from the command. The status above is the plain-language result.")
+            }
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Status. \(message)")
+        .accessibilityElement(children: .contain)
     }
 }
 

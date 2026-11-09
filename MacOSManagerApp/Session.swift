@@ -30,9 +30,9 @@ enum AppScreen: String, CaseIterable, Identifiable, Hashable {
         case .compatibility:
             return "macOS versions Apple lists for the Mac you looked up."
         case .download:
-            return "Open Apple's own download pages. Nothing is downloaded inside this app."
+            return "Open Apple's own download pages. The installer download is on the Install screen."
         case .usb:
-            return "Choose a listed macOS version, check an installer, then open Apple's installer or create a USB after naming the volume."
+            return "Choose a macOS version Apple's live catalog offers for this Mac, download it, then open Apple's installer or create a USB after naming the volume."
         }
     }
 }
@@ -83,6 +83,11 @@ final class Session: ObservableObject, @unchecked Sendable {
     @Published var typedEraseName = ""
     @Published var progressLines: [String] = []
     @Published var isWorking = false
+    @Published var statusDetail: String?
+    @Published var hostReport: CompatibilityReport?
+    @Published var installerOffers: [InstallerOffer] = []
+    @Published var installerRefusals: [InstallerRefusal] = []
+    @Published var didReadLiveCatalog = false
     private var activeCancel = WorkflowCancel()
 
     func load() {
@@ -170,22 +175,40 @@ final class Session: ObservableObject, @unchecked Sendable {
         }
     }
 
-    func downloadSelectedInstaller() {
-        guard let catalog, let report, let assessment = report.versions.first(where: { $0.releaseID == selectedReleaseID }) else {
-            announce("Look up a Mac and choose a version first.")
+    func prepareHost() {
+        guard let catalog else { return }
+        let reading = SystemProbe.read()
+        hostReport = InstallerOffers.hostReport(catalog: catalog, reading: reading)
+    }
+
+    func refreshLiveCatalog() {
+        guard let catalog else {
+            announce(loadError ?? "The catalog is not loaded.")
             return
         }
-        switch InstallWorkflow.fetchFullInstaller(assessment: assessment, catalog: catalog) {
-        case .failure(let error):
-            announce(error.localizedDescription)
-        case .success(let command):
-            let build = assessment.latestBuild
-            start("Asking Apple's softwareupdate for \(build). This does not erase a disk.") { cancel in
-                _ = try InstallWorkflow.execute(command, runner: ProcessCommandRunner(allowAdministratorCommands: false), cancel: cancel) { line in
-                    Task { @MainActor in self.note(line) }
-                }
-                return "softwareupdate finished for \(build). Check the installer, then choose open or USB. This did not erase a disk."
+        let requested = selectedReleaseID
+        start("Reading Apple's catalog for installers this Mac can run. This does not erase a disk.") { cancel in
+            let packages = try await AppleCatalogClient.loadInstallerPackages(isCancelled: cancel.isCancelled) { line in
+                Task { @MainActor in self.note(line) }
             }
+            let offerSet = await self.publishOffers(catalog: catalog, packages: packages, requestedReleaseID: requested)
+            if offerSet.offers.isEmpty {
+                return offerSet.refusals.first?.plainLanguage ?? "Apple's catalog did not include an installer this Mac can run."
+            }
+            let names = offerSet.offers.map { "\($0.marketingName) \($0.version)" }.joined(separator: ", ")
+            let hidden = offerSet.refusals.isEmpty ? "" : " \(offerSet.refusals.count) other versions are explained on screen."
+            return "Apple's catalog offers \(names) for this Mac.\(hidden)"
+        }
+    }
+
+    func downloadSelectedInstaller() {
+        guard let catalog else {
+            announce(loadError ?? "The catalog is not loaded.")
+            return
+        }
+        let requested = selectedReleaseID
+        start("Checking Apple's catalog for an installer this Mac can run. This does not erase a disk.") { cancel in
+            try await self.downloadRelease(catalog: catalog, requestedReleaseID: requested, cancel: cancel)
         }
     }
 
@@ -269,7 +292,9 @@ final class Session: ObservableObject, @unchecked Sendable {
             } catch {
                 await MainActor.run {
                     self.isWorking = false
-                    self.announce((error as? LocalizedError)?.errorDescription ?? error.localizedDescription)
+                    let spoken = InstallErrorMapping.present(error)
+                    let detail = spoken.rawDetail.trimmingCharacters(in: .whitespacesAndNewlines)
+                    self.announce(spoken.plainLanguage, detail: detail.isEmpty ? nil : detail)
                 }
             }
         }
@@ -280,8 +305,221 @@ final class Session: ObservableObject, @unchecked Sendable {
         progressLines.append(line)
     }
 
-    func announce(_ message: String) {
+    func announce(_ message: String, detail: String? = nil) {
         statusMessage = message
+        let trimmed = detail?.trimmingCharacters(in: .whitespacesAndNewlines)
+        statusDetail = (trimmed?.isEmpty == false) ? trimmed : nil
         Announcer.say(message)
+    }
+
+    private func publishOffers(
+        catalog: Catalog,
+        packages: [CatalogInstallerPackage],
+        requestedReleaseID: String
+    ) async -> InstallerOfferSet {
+        let reading = SystemProbe.read()
+        let host = InstallerOffers.hostReport(catalog: catalog, reading: reading)
+        let offerSet = InstallerOffers.make(catalog: catalog, hostReport: host, packages: packages)
+        await MainActor.run {
+            self.hostReport = host
+            self.installerOffers = offerSet.offers
+            self.installerRefusals = offerSet.refusals
+            self.didReadLiveCatalog = true
+            if !offerSet.offers.contains(where: { $0.releaseID == requestedReleaseID }),
+               let first = offerSet.offers.first {
+                self.selectedReleaseID = first.releaseID
+            }
+        }
+        return offerSet
+    }
+
+    private func downloadRelease(
+        catalog: Catalog,
+        requestedReleaseID: String,
+        cancel: WorkflowCancel
+    ) async throws -> String {
+        let packages: [CatalogInstallerPackage]
+        do {
+            packages = try await AppleCatalogClient.loadInstallerPackages(isCancelled: cancel.isCancelled) { line in
+                Task { @MainActor in self.note(line) }
+            }
+        } catch {
+            let spoken = InstallErrorMapping.present(error)
+            let reading = SystemProbe.read()
+            let host = InstallerOffers.hostReport(catalog: catalog, reading: reading)
+            await MainActor.run { self.hostReport = host }
+            if spoken.allowsSoftwareUpdateFallback,
+               let version = InstallerOffers.bundledVersionIfInstallable(catalog: catalog, hostReport: host, releaseID: requestedReleaseID) {
+                await MainActor.run {
+                    self.announce(
+                        "Apple's live catalog could not be read. Asking softwareupdate for \(version), the build recorded for this Mac.",
+                        detail: spoken.rawDetail
+                    )
+                }
+                return try runSoftwareUpdate(version: version, cancel: cancel)
+            }
+            throw spoken
+        }
+        let offerSet = await publishOffers(catalog: catalog, packages: packages, requestedReleaseID: requestedReleaseID)
+        guard let offer = offerSet.offers.first(where: { $0.releaseID == requestedReleaseID }) else {
+            let refusal = offerSet.refusals.first { $0.id == requestedReleaseID } ?? offerSet.refusals.first
+            throw SpokenInstallError(
+                plainLanguage: refusal?.plainLanguage ?? "That version is not offered for this Mac. Nothing was downloaded.",
+                rawDetail: "",
+                allowsSoftwareUpdateFallback: false,
+                allowsDirectPackageFallback: false
+            )
+        }
+        return try await install(offer, cancel: cancel)
+    }
+
+    private func install(_ offer: InstallerOffer, cancel: WorkflowCancel) async throws -> String {
+        let attempts = InstallerAttemptOrder.preferred(package: offer.package)
+        var directFailure: SpokenInstallError?
+        for (index, attempt) in attempts.enumerated() {
+            if cancel.isCancelled() { throw WorkflowError.cancelled }
+            do {
+                switch attempt {
+                case .direct(let package):
+                    await MainActor.run {
+                        self.note("Downloading \(offer.marketingName) \(offer.version), product \(offer.productKey), from Apple.")
+                    }
+                    return try await runDirect(package, offer: offer, cancel: cancel)
+                case .softwareUpdate(let version):
+                    await MainActor.run {
+                        self.note("Asking softwareupdate for \(version).")
+                    }
+                    return try runSoftwareUpdate(version: version, cancel: cancel)
+                }
+            } catch {
+                let remaining = Array(attempts.suffix(from: index + 1))
+                let spoken = failure(error, attempt: attempt, remaining: remaining)
+                if case .direct = attempt { directFailure = spoken }
+                if index + 1 < attempts.count, InstallerAttemptOrder.mayContinue(after: spoken, to: attempts[index + 1]) {
+                    await MainActor.run {
+                        self.announce(spoken.plainLanguage, detail: spoken.rawDetail.isEmpty ? nil : spoken.rawDetail)
+                    }
+                    continue
+                }
+                if let directFailure, case .softwareUpdate = attempt {
+                    throw SpokenInstallError(
+                        plainLanguage: "The installer was not installed. The catalog download did not finish, and softwareupdate did not finish either. \(spoken.plainLanguage)",
+                        rawDetail: "Catalog download:\n\(directFailure.rawDetail)\n\nsoftwareupdate:\n\(spoken.rawDetail)",
+                        allowsSoftwareUpdateFallback: false,
+                        allowsDirectPackageFallback: false
+                    )
+                }
+                throw spoken
+            }
+        }
+        throw SpokenInstallError(
+            plainLanguage: "The installer was not installed.",
+            rawDetail: "",
+            allowsSoftwareUpdateFallback: false,
+            allowsDirectPackageFallback: false
+        )
+    }
+
+    private func failure(_ error: Error, attempt: InstallerAttempt, remaining: [InstallerAttempt]) -> SpokenInstallError {
+        if let spoken = error as? SpokenInstallError { return spoken }
+        if case .softwareUpdate = attempt,
+           let workflow = error as? WorkflowError,
+           case .commandFailed(let code, let message) = workflow {
+            let willDirect = remaining.contains {
+                if case .direct = $0 { return true }
+                return false
+            }
+            return InstallErrorMapping.softwareUpdate(exitCode: code, message: message, willTryDirectDownload: willDirect)
+        }
+        return InstallErrorMapping.present(error)
+    }
+
+    private func runSoftwareUpdate(version: String, cancel: WorkflowCancel) throws -> String {
+        let command = try InstallWorkflow.softwareUpdateCommand(version: version).get()
+        _ = try InstallWorkflow.execute(
+            command,
+            runner: ProcessCommandRunner(allowAdministratorCommands: false),
+            cancel: cancel
+        ) { line in
+            Task { @MainActor in self.note(line) }
+        }
+        return "softwareupdate finished for \(version). Check Applications for the installer app. This did not erase a disk."
+    }
+
+    private func runDirect(
+        _ package: CatalogInstallerPackage,
+        offer: InstallerOffer,
+        cancel: WorkflowCancel
+    ) async throws -> String {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent("MacOSManager-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let destination = directory.appendingPathComponent("InstallAssistant.pkg")
+        var keepPackage = false
+        defer {
+            if !keepPackage {
+                try? FileManager.default.removeItem(at: directory)
+            }
+        }
+        try await AppleHTTPS.download(
+            package.packageURL,
+            to: destination,
+            expectedSize: package.expectedSize,
+            isCancelled: cancel.isCancelled
+        ) { line in
+            Task { @MainActor in self.note(line) }
+        }
+        let actual = (try FileManager.default.attributesOfItem(atPath: destination.path)[.size] as? NSNumber)?.int64Value ?? -1
+        if let sizeError = PackageSizeCheck.evaluate(expected: package.expectedSize, actual: actual) {
+            throw sizeError
+        }
+        let verdict = try signatureVerdict(at: destination, cancel: cancel)
+        await MainActor.run { self.note(verdict.spoken.plainLanguage) }
+        guard verdict.accepted else { throw verdict.spoken }
+        await MainActor.run {
+            self.note("macOS will ask for an administrator password to install the package into Applications. The password is not stored. This does not erase a disk.")
+        }
+        let command = try InstallerCommands.install(packagePath: destination.path).get()
+        do {
+            _ = try InstallWorkflow.execute(
+                command,
+                runner: ProcessCommandRunner(allowAdministratorCommands: true),
+                cancel: cancel
+            ) { line in
+                Task { @MainActor in self.note(line) }
+            }
+        } catch {
+            keepPackage = true
+            let spoken = InstallErrorMapping.present(error)
+            throw SpokenInstallError(
+                plainLanguage: "The package was checked, but it was not installed into Applications. \(spoken.plainLanguage)",
+                rawDetail: "Package kept at \(destination.path).\n\(spoken.rawDetail)",
+                allowsSoftwareUpdateFallback: false,
+                allowsDirectPackageFallback: false
+            )
+        }
+        let names = InstallWorkflow.findInstallers(in: URL(fileURLWithPath: "/Applications")).compactMap { try? $0.get() }.map(\.displayName)
+        if names.isEmpty {
+            return "The package installer finished for \(offer.marketingName) \(offer.version). No Install macOS app was found in Applications yet. This did not erase a disk."
+        }
+        return "Installed \(names.joined(separator: ", ")) into Applications. Check the installer, then choose open or USB. This did not erase a disk."
+    }
+
+    private func signatureVerdict(at destination: URL, cancel: WorkflowCancel) throws -> SignatureVerdict {
+        let command = try InstallerCommands.checkSignature(packagePath: destination.path).get()
+        let runner = ProcessCommandRunner(allowAdministratorCommands: false)
+        do {
+            let outcome = try InstallWorkflow.execute(command, runner: runner, cancel: cancel) { line in
+                Task { @MainActor in self.note(line) }
+            }
+            return PackageSignatureCheck.evaluate(
+                exitCode: outcome.exitCode,
+                output: outcome.standardOutput + "\n" + outcome.standardError
+            )
+        } catch let error as WorkflowError {
+            if case .commandFailed(let code, let message) = error {
+                return PackageSignatureCheck.evaluate(exitCode: code, output: message)
+            }
+            throw error
+        }
     }
 }

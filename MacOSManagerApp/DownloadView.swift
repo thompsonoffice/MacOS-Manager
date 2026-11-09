@@ -8,7 +8,7 @@ struct DownloadView: View {
         VStack(alignment: .leading, spacing: 16) {
             SectionHeading(
                 title: "Download from Apple",
-                subtitle: "These buttons open Apple's pages. macOS Manager does not download or install macOS."
+                subtitle: "These buttons open Apple's pages. To download an installer inside macOS Manager, use Install. That screen reads Apple's live catalog and only offers a version this Mac can run."
             )
             if let catalog = session.catalog {
                 Picker("Version", selection: $session.selectedReleaseID) {
