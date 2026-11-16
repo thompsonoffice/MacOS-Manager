@@ -74,10 +74,9 @@ final class AccessibilityAuditUITests: XCTestCase {
         waitUntilSettled()
         // performAccessibilityAudit inspects the hierarchy. It does not activate controls,
         // so it does not open an Apple page or start a download.
-        let root = app.descendants(matching: .any)["store-root"]
-        XCTAssertTrue(root.exists, "The audit should inspect the app content.")
+        XCTAssertTrue(app.descendants(matching: .any)["store-root"].exists, "The audit should inspect the app content.")
         do {
-            try root.performAccessibilityAudit { issue in
+            try app.performAccessibilityAudit { issue in
                 let element = issue.element.map { "\($0)" } ?? "no element"
                 print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element)")
                 return false
