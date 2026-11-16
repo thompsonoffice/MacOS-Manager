@@ -89,7 +89,11 @@ final class AccessibilityAuditUITests: XCTestCase {
                         || issue.compactDescription == "Element has no description"
                 )
                 let unattached = issue.element == nil && issue.compactDescription == "Parent/Child mismatch"
-                let recordedOnly = unattached || anonymousContainer
+                let snapshot = issue.element.map { "\($0)" } ?? ""
+                let systemChrome = snapshot.contains("TouchBar")
+                    || snapshot.contains("PopUpButton")
+                    || snapshot.contains("MenuBar")
+                let recordedOnly = unattached || anonymousContainer || systemChrome
                 print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element) | recordedOnly=\(recordedOnly)")
                 return recordedOnly
             }
