@@ -12,6 +12,7 @@
 		B20000000000000000000072 /* StoreSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000052 /* StoreSession.swift */; };
 		B20000000000000000000073 /* SystemProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000053 /* SystemProbe.swift */; };
 		B20000000000000000000074 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000054 /* ContentView.swift */; };
+		B20000000000000000000077 /* ReadinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000055 /* ReadinessView.swift */; };
 		B20000000000000000000075 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000092 /* PrivacyInfo.xcprivacy */; };
 		B20000000000000000000076 /* AccessibilityAuditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000093 /* AccessibilityAuditUITests.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		B20000000000000000000052 /* StoreSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSession.swift; sourceTree = "<group>"; };
 		B20000000000000000000053 /* SystemProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProbe.swift; sourceTree = "<group>"; };
 		B20000000000000000000054 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B20000000000000000000055 /* ReadinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadinessView.swift; sourceTree = "<group>"; };
 		B20000000000000000000090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20000000000000000000091 /* MacOSManagerStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSManagerStore.entitlements; sourceTree = "<group>"; };
 		B20000000000000000000092 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				B20000000000000000000052 /* StoreSession.swift */,
 				B20000000000000000000053 /* SystemProbe.swift */,
 				B20000000000000000000054 /* ContentView.swift */,
+				B20000000000000000000055 /* ReadinessView.swift */,
 				B20000000000000000000090 /* Info.plist */,
 				B20000000000000000000091 /* MacOSManagerStore.entitlements */,
 				B20000000000000000000092 /* PrivacyInfo.xcprivacy */,
@@ -195,6 +198,7 @@
 				B20000000000000000000072 /* StoreSession.swift in Sources */,
 				B20000000000000000000073 /* SystemProbe.swift in Sources */,
 				B20000000000000000000074 /* ContentView.swift in Sources */,
+				B20000000000000000000077 /* ReadinessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

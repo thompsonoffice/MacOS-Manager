@@ -75,27 +75,67 @@ final class AccessibilityAuditUITests: XCTestCase {
         // performAccessibilityAudit inspects the hierarchy. It does not activate controls,
         // so it does not open an Apple page or start a download.
         XCTAssertTrue(app.descendants(matching: .any)["store-root"].exists, "The audit should inspect the app content.")
+        try auditVisibleWindow()
+    }
+
+    func testReadinessAndChecklistAreLabeledWithoutOpeningApple() throws {
+        waitUntilSettled()
+        let field = app.textFields["identifier-field"]
+        XCTAssertTrue(field.waitForExistence(timeout: 5))
+        field.click()
+        field.typeKey("a", modifierFlags: [.command])
+        field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 64))
+        field.typeText("MacBookPro16,1")
+        let lookup = app.buttons["lookup-button"]
+        let enabledDeadline = Date().addingTimeInterval(5)
+        while Date() < enabledDeadline && !lookup.isEnabled {
+            Thread.sleep(forTimeInterval: 0.1)
+        }
+        XCTAssertTrue(lookup.isEnabled, "Look up should enable after a model identifier is typed.")
+        lookup.click()
+
+        let status = app.staticTexts["status-message"]
+        let readinessDeadline = Date().addingTimeInterval(25)
+        var readiness = app.buttons["readiness-26"]
+        while Date() < readinessDeadline {
+            readiness = app.buttons["readiness-26"]
+            let text = spoken(status)
+            let stillWorking = text.contains("Looking up ") || text.contains("Reading the bundled")
+            if readiness.exists && readiness.isEnabled && !stillWorking {
+                break
+            }
+            Thread.sleep(forTimeInterval: 0.2)
+        }
+        XCTAssertTrue(readiness.exists && readiness.isEnabled, "Tahoe should be offered for MacBook Pro (16-inch, 2019). Last status: \(spoken(status))")
+        XCTAssertFalse(readiness.label.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        readiness.click()
+
+        let summary = app.descendants(matching: .any)["readiness-summary"]
+        XCTAssertTrue(summary.waitForExistence(timeout: 10))
+        let spokenSummary = spoken(summary)
+        print("READINESS_SUMMARY \(spokenSummary)")
+        XCTAssertTrue(
+            spokenSummary.hasPrefix("Ready.") || spokenSummary.hasPrefix("Not ready, here's why."),
+            "The summary should start with the single result. It was: \(spokenSummary)"
+        )
+        try auditVisibleWindow()
+
+        app.buttons["show-checklist"].click()
+        let heading = app.descendants(matching: .any)["checklist-heading"]
+        XCTAssertTrue(heading.waitForExistence(timeout: 5))
+        XCTAssertFalse(spoken(heading).isEmpty)
+        let timeMachine = app.buttons["open-time-machine-settings"]
+        XCTAssertTrue(timeMachine.waitForExistence(timeout: 5))
+        XCTAssertFalse(timeMachine.label.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        XCTAssertTrue(app.buttons["open-voiceover-guide"].exists)
+        // Do not click Time Machine, the VoiceOver guide, or any Apple download button.
+        try auditVisibleWindow()
+    }
+
+    private func auditVisibleWindow() throws {
         do {
             try app.performAccessibilityAudit { issue in
-                let element = issue.element.map { "\($0) id=\($0.identifier) label=\($0.label)" } ?? "no element"
-                let label = issue.element?.label.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-                let identifier = issue.element?.identifier ?? ""
-                let anonymous = identifier.isEmpty && label.isEmpty
-                // XCTest reports parent/child mismatches and a missing description for an
-                // anonymous group (no identifier and no label) that it cannot tie to a
-                // store control. Findings on identified controls still fail the test.
-                let anonymousContainer = anonymous && (
-                    issue.compactDescription == "Parent/Child mismatch"
-                        || issue.compactDescription == "Element has no description"
-                )
-                let unattached = issue.element == nil && issue.compactDescription == "Parent/Child mismatch"
-                let snapshot = issue.element.map { "\($0)" } ?? ""
-                let systemChrome = snapshot.contains("TouchBar")
-                    || snapshot.contains("PopUpButton")
-                    || snapshot.contains("MenuBar")
-                let recordedOnly = unattached || anonymousContainer || systemChrome
-                print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element) | recordedOnly=\(recordedOnly)")
-                return recordedOnly
+                self.auditIssueIsOutsideStoreControls(issue)
             }
         } catch {
             let text = String(describing: error)
@@ -104,6 +144,28 @@ final class AccessibilityAuditUITests: XCTestCase {
             }
             throw error
         }
+    }
+
+    /// XCTest reports parent/child mismatches and a missing description for an
+    /// anonymous group (no identifier and no label) that it cannot tie to a
+    /// store control. Findings on identified controls still fail the test.
+    private func auditIssueIsOutsideStoreControls(_ issue: XCUIAccessibilityAuditIssue) -> Bool {
+        let element = issue.element.map { "\($0) id=\($0.identifier) label=\($0.label)" } ?? "no element"
+        let label = issue.element?.label.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let identifier = issue.element?.identifier ?? ""
+        let anonymous = identifier.isEmpty && label.isEmpty
+        let anonymousContainer = anonymous && (
+            issue.compactDescription == "Parent/Child mismatch"
+                || issue.compactDescription == "Element has no description"
+        )
+        let unattached = issue.element == nil && issue.compactDescription == "Parent/Child mismatch"
+        let snapshot = issue.element.map { "\($0)" } ?? ""
+        let systemChrome = snapshot.contains("TouchBar")
+            || snapshot.contains("PopUpButton")
+            || snapshot.contains("MenuBar")
+        let recordedOnly = unattached || anonymousContainer || systemChrome
+        print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element) | recordedOnly=\(recordedOnly)")
+        return recordedOnly
     }
 
     private func waitUntilSettled() {

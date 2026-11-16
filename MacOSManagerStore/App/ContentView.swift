@@ -11,11 +11,18 @@ struct ContentView: View {
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        header
-                        statusBlock
-                        thisMacBlock
-                        compatibleList
-                        aboutBlock
+                        switch session.screen {
+                        case .home:
+                            header
+                            statusBlock
+                            thisMacBlock
+                            compatibleList
+                            aboutBlock
+                        case .readiness:
+                            ReadinessScreen()
+                        case .checklist:
+                            ChecklistScreen()
+                        }
                     }
                     .frame(maxWidth: 760, alignment: .leading)
                     .padding(24)
@@ -35,7 +42,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("app-title")
-            Text("This App Store edition helps you install, upgrade, or downgrade macOS on this Mac. It reads the model identifier, lists every compatible version from Apple's published pages, and opens Apple's official installer or Software Update page for the version you choose. Apple handles the download and progress. This edition does not create a bootable USB installer.")
+            Text("This App Store edition helps you decide whether this Mac can run a macOS version, then opens Apple's official installer or Software Update page. It checks the model, free space, memory, power, and whether the choice is an upgrade, the same version, or a downgrade. Apple handles any download. This edition does not create a bootable USB installer.")
         }
     }
 
@@ -172,6 +179,14 @@ struct ContentView: View {
                 Text(statement)
             }
             Text(purposeText(for: version))
+                .font(.body)
+            Button("Can my Mac run \(version.marketingName)?") {
+                session.showReadiness(releaseID: version.releaseID)
+            }
+            .disabled(session.isWorking)
+            .accessibilityLabel("Can my Mac run \(version.marketingName)?")
+            .accessibilityHint("Checks the model, free space, memory, power, and whether this choice is an upgrade, the same version, or a downgrade. Does not install macOS and does not open an Apple page.")
+            .accessibilityIdentifier("readiness-\(version.releaseID)")
             if let route {
                 Text(route.explanation)
                 Button(route.buttonTitle) {
@@ -211,7 +226,7 @@ struct ContentView: View {
         case .upgrade:
             return "Choosing this version would upgrade this Mac. The button opens Apple's official installer or Software Update page. Apple handles the download and progress."
         case .downgrade:
-            return "Choosing this version would install or downgrade this Mac to an older compatible system. The button opens Apple's official installer or Support page. Apple handles the download and progress. Software Update may not offer every older version."
+            return "Choosing this version would be a downgrade. \(DowngradeCopy.limitation) \(DowngradeCopy.separateEdition) Choose Can my Mac run this for the full check. The download button only opens Apple's official page. This app does not install macOS."
         default:
             return "The button opens Apple's official installer or Software Update page so you can install this version on this Mac. Apple handles the download and progress."
         }

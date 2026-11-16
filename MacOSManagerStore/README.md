@@ -8,15 +8,17 @@ This edition helps a VoiceOver user **install, upgrade, or downgrade macOS on th
 
 - Reads this Mac's model identifier with `sysctl hw.model` (and shows a friendly Apple model name from the bundled table).
 - Lists every macOS version Apple's published compatibility pages say is compatible with that model, and marks the version currently installed.
+- Checks whether the selected version can run on this Mac: model, free space against Apple's stated requirement when one exists, memory when Apple states it, upgrade / same version / downgrade, and power from IOKit. The spoken result is "Ready." or "Not ready, here's why."
+- Shows a pre-install checklist: Time Machine (opens System Settings), power, internet, restarts, and VoiceOver during installation.
 - Offers a button that opens Apple's official installer or Software Update page for the chosen version. Apple handles the download and progress.
-- Stays usable while lookup work runs in the background, and explains status in plain words.
+- Stays usable while lookup work runs in the background, and explains status in plain words. Text uses Dynamic Type styles and VoiceOver labels.
 
 It does **not** create a bootable USB installer, run `softwareupdate` or `createinstallmedia`, or include a privileged helper. Creating a bootable USB installer is a feature of the full edition, which is a separate product. The App Store UI mentions that in plain language and does **not** include an external purchase link.
 
 ## Layout
 
 - `Sources/MacOSManagerStoreCore` is the compatibility table and lookup rules only.
-- `Tests/MacOSManagerStoreCoreTests` covers lookup, official download routes, and installed-version marking.
+- `Tests/MacOSManagerStoreCoreTests` covers lookup, official download routes, installed-version marking, and readiness (free space, battery, and upgrade or downgrade).
 - `App` is the sandboxed SwiftUI interface, with `PrivacyInfo.xcprivacy` set to Data Not Collected.
 - `MacOSManagerStore.xcodeproj` builds the unsigned app and the accessibility audit UI tests.
 - `APP-STORE-REVIEW-NOTES.md` is Notes for Review.

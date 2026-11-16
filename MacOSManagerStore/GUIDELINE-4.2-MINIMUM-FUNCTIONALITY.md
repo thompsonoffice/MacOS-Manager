@@ -15,9 +15,13 @@ Reviewers may still decide that identifying a Mac and opening official Apple pag
 - It reads the model identifier on device and matches it to a bundled, sourced table (the lookup works offline).
 - It applies published compatibility rules, including exact model-name matching and Apple's Apple silicon statement, and it says so when a similar name is not treated as a match.
 - It marks the currently installed version and states whether a choice would upgrade, downgrade, or reinstall what is already running.
-- The interface is written for VoiceOver: labeled controls, hints, headers, a plain-language status region, and spoken announcements. Status work is asynchronous so the window does not freeze.
+- "Can my Mac run this?" compares the selected version with this Mac: the model table, free space on the startup volume against Apple's stated requirement when one exists, memory when Apple states a minimum, and whether the choice is an upgrade, the same version, or a downgrade. When Apple's current pages do not state a free-space or memory number, the check says so and does not invent one. A downgrade is explained in plain language: Apple's installer can't install an older macOS over a newer one on the local drive, so that needs a bootable USB installer or an Apple restore. The full edition is mentioned as a separate product, with no link and no price.
+- It reads power with IOKit power sources, which the sandbox allows. It warns when the Mac is on battery or below 50 percent, and it says when a desktop has no battery. The 50 percent line is this app's warning, and the screen says that.
+- A checklist before install covers a Time Machine backup (a button opens System Settings, with Apple's https guide if that does not open), staying plugged in, a stable internet connection, restarts, and VoiceOver during installation (VoiceOver may be unavailable briefly at a restart; Command-F5 turns it on or off).
+- The readiness result is one spoken summary that starts with "Ready." or "Not ready, here's why."
+- The interface is written for VoiceOver: labeled controls, hints, headers, Dynamic Type text styles, a plain-language status region, and spoken announcements. Status work is asynchronous so the window does not freeze.
 
-These are real features, but they may not be enough for every reviewer.
+These are real on-device features, but they may not be enough for every reviewer. The app still does not download or install macOS.
 
 ## What would make a rejection more likely
 
