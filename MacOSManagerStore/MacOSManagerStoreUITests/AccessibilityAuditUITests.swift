@@ -77,7 +77,7 @@ final class AccessibilityAuditUITests: XCTestCase {
         XCTAssertTrue(app.descendants(matching: .any)["store-root"].exists, "The audit should inspect the app content.")
         do {
             try app.performAccessibilityAudit { issue in
-                let element = issue.element.map { "\($0)" } ?? "no element"
+                let element = issue.element.map { "\($0) id=\($0.identifier) label=\($0.label)" } ?? "no element"
                 // XCTest sometimes reports a parent/child mismatch for a node it cannot
                 // resolve. That includes AppKit window buttons, which are not store controls.
                 // A finding attached to an element is a real failure.

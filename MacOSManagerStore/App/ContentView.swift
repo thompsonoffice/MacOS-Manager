@@ -21,7 +21,6 @@ struct ContentView: View {
                     .padding(24)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .accessibilityElement(children: .contain)
             }
         }
         .onAppear { session.start() }
