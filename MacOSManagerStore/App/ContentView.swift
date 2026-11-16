@@ -21,6 +21,7 @@ struct ContentView: View {
                     .padding(24)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .accessibilityElement(children: .contain)
             }
         }
         .onAppear { session.start() }
@@ -47,11 +48,10 @@ struct ContentView: View {
                 ProgressView("Working, the window is not frozen.")
                     .accessibilityIdentifier("working-indicator")
             }
-            // The label is the sentence itself. A container label plus
-            // children: .contain left this text with an empty label and made
-            // the accessibility audit report a parent/child mismatch.
             Text(session.statusMessage)
+                .accessibilityElement(children: .combine)
                 .accessibilityLabel(session.statusMessage)
+                .accessibilityValue(session.statusMessage)
                 .accessibilityIdentifier("status-message")
         }
     }
@@ -117,24 +117,22 @@ struct ContentView: View {
             Text("Compatible macOS versions")
                 .font(.title2)
                 .accessibilityAddTraits(.isHeader)
+                .accessibilityIdentifier("compatible-version-list")
             Text("A version appears here only when Apple's compatibility page uses this exact model name, or when Apple's published Apple silicon statement covers it. Similar names are not treated as a match. Choose a version to install, upgrade, or downgrade on this Mac. Versions older than macOS Catalina have no per-model list in this table.")
                 .foregroundStyle(.secondary)
             if let report = session.report, report.found {
                 let rows = report.compatibleVersions
                 if rows.isEmpty {
                     Text("The bundled table does not list a compatible version for this exact model name.")
-                        .accessibilityIdentifier("compatible-version-list")
                 } else {
                     VStack(alignment: .leading, spacing: 16) {
                         ForEach(rows) { version in
                             versionRow(version, catalog: session.catalog)
                         }
                     }
-                    .accessibilityIdentifier("compatible-version-list")
                 }
             } else {
                 Text("Compatible versions will appear here after this Mac is identified.")
-                    .accessibilityIdentifier("compatible-version-list")
             }
             if let catalog = session.catalog {
                 Button("Open Apple's Software Update instructions") {

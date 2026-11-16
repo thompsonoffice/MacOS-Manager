@@ -20,8 +20,9 @@ final class AccessibilityAuditUITests: XCTestCase {
 
         let status = app.staticTexts["status-message"]
         XCTAssertTrue(status.waitForExistence(timeout: 15), "A plain-language status message should appear.")
-        let statusLabel = status.label.trimmingCharacters(in: .whitespacesAndNewlines)
-        XCTAssertFalse(statusLabel.isEmpty, "The status message must have a spoken label. Label was '\(status.label)'.")
+        let statusLabel = spoken(status)
+        print("STATUS_AX label=\(status.label) value=\(String(describing: status.value))")
+        XCTAssertFalse(statusLabel.isEmpty, "The status message must be spoken. Label was '\(status.label)', value was '\(String(describing: status.value))'.")
 
         XCTAssertTrue(app.staticTexts["model-identifier"].exists)
         XCTAssertTrue(app.staticTexts["installed-version"].exists)
@@ -73,8 +74,10 @@ final class AccessibilityAuditUITests: XCTestCase {
         waitUntilSettled()
         // performAccessibilityAudit inspects the hierarchy. It does not activate controls,
         // so it does not open an Apple page or start a download.
+        let root = app.descendants(matching: .any)["store-root"]
+        XCTAssertTrue(root.exists, "The audit should inspect the app content.")
         do {
-            try app.performAccessibilityAudit { issue in
+            try root.performAccessibilityAudit { issue in
                 let element = issue.element.map { "\($0)" } ?? "no element"
                 print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element)")
                 return false
@@ -96,8 +99,9 @@ final class AccessibilityAuditUITests: XCTestCase {
         var last = ""
         while Date() < deadline {
             let indicator = app.descendants(matching: .any)["working-indicator"]
-            let current = status.label
+            let current = spoken(status)
             let busy = indicator.exists
+                || current.isEmpty
                 || current.contains("not been read yet")
                 || current.contains("Reading the bundled")
                 || current.contains("Looking up ")
@@ -114,8 +118,17 @@ final class AccessibilityAuditUITests: XCTestCase {
             }
             Thread.sleep(forTimeInterval: 0.2)
         }
-        print("VISIBLE_TEXT \(app.staticTexts.allElementsBoundByIndex.prefix(40).map(\.label))")
-        XCTFail("The window did not settle. Last status: \(status.label)")
+        print("VISIBLE_TEXT \(app.staticTexts.allElementsBoundByIndex.prefix(40).map { "label=\($0.label) value=\(String(describing: $0.value))" })")
+        XCTFail("The window did not settle. Last status label: \(status.label) value: \(String(describing: status.value))")
+    }
+
+    /// macOS exposes some SwiftUI text as the accessibility value rather than the label.
+    /// VoiceOver speaks whichever of those is set.
+    private func spoken(_ element: XCUIElement) -> String {
+        let label = element.label.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !label.isEmpty { return label }
+        let value = (element.value as? String)?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        return value
     }
 
     private func elementExists(_ identifier: String) -> Bool {
