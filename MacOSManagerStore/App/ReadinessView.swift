@@ -15,16 +15,15 @@ struct ReadinessScreen: View {
             if let readiness = session.readinessReport() {
                 Text(readiness.headline)
                     .font(.largeTitle)
+                    .foregroundStyle(.primary)
                     .accessibilityAddTraits(.isHeader)
-                    .accessibilityIdentifier("readiness-headline")
-                Text(readiness.marketingName)
-                    .font(.title2)
-                    .accessibilityAddTraits(.isHeader)
-                Text(readiness.spokenSummary)
-                    .font(.body)
                     .accessibilityLabel(readiness.spokenSummary)
                     .accessibilityHint("Spoken summary of the model, free space, memory, upgrade or downgrade, and power checks.")
                     .accessibilityIdentifier("readiness-summary")
+                Text(readiness.marketingName)
+                    .font(.title2)
+                    .foregroundStyle(.primary)
+                    .accessibilityAddTraits(.isHeader)
 
                 ForEach(readiness.checks) { check in
                     checkBlock(check)
@@ -37,7 +36,7 @@ struct ReadinessScreen: View {
                 .accessibilityIdentifier("show-checklist")
             } else {
                 Text("Choose a macOS version first. The readiness check has nothing to compare yet.")
-                    .font(.body)
+                    .foregroundStyle(.primary)
                     .accessibilityIdentifier("readiness-summary")
             }
         }
@@ -48,11 +47,13 @@ struct ReadinessScreen: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(check.title)
                     .font(.title3)
+                    .foregroundStyle(.primary)
                     .accessibilityAddTraits(.isHeader)
                 Text(outcomeWord(check.outcome))
                     .font(.headline)
+                    .foregroundStyle(.primary)
                 Text(check.detail)
-                    .font(.body)
+                    .foregroundStyle(.primary)
                     .accessibilityIdentifier("readiness-check-\(check.id)")
             }
 
@@ -92,14 +93,16 @@ struct ChecklistScreen: View {
 
             Text("Before you install")
                 .font(.largeTitle)
+                .foregroundStyle(.primary)
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("checklist-heading")
             Text("This checklist does not install macOS. It reminds you what to do before you use Apple's own installer.")
-                .font(.body)
+                .foregroundStyle(.primary)
 
             if let readiness = session.readinessReport() {
                 Text(readiness.headline)
                     .font(.title2)
+                    .foregroundStyle(.primary)
                     .accessibilityLabel(readiness.spokenSummary)
                     .accessibilityIdentifier("checklist-result")
             }
@@ -108,10 +111,11 @@ struct ChecklistScreen: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(item.title)
                         .font(.title3)
+                        .foregroundStyle(.primary)
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("checklist-\(item.id)")
                     Text(item.detail)
-                        .font(.body)
+                        .foregroundStyle(.primary)
                     ForEach(item.actions) { action in
                         Button(action.title) {
                             session.openChecklistLink(action)

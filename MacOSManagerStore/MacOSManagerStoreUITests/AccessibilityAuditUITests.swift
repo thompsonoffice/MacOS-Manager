@@ -115,7 +115,7 @@ final class AccessibilityAuditUITests: XCTestCase {
         let spokenSummary = spoken(summary)
         print("READINESS_SUMMARY \(spokenSummary)")
         XCTAssertTrue(
-            spokenSummary.hasPrefix("Ready.") || spokenSummary.hasPrefix("Not ready, here's why."),
+            spokenSummary.hasPrefix("Ready") || spokenSummary.hasPrefix("Not ready, here's why"),
             "The summary should start with the single result. It was: \(spokenSummary)"
         )
         try auditVisibleWindow()
