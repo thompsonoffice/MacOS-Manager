@@ -20,7 +20,8 @@ final class AccessibilityAuditUITests: XCTestCase {
 
         let status = app.staticTexts["status-message"]
         XCTAssertTrue(status.waitForExistence(timeout: 15), "A plain-language status message should appear.")
-        XCTAssertFalse(status.label.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        let statusLabel = status.label.trimmingCharacters(in: .whitespacesAndNewlines)
+        XCTAssertFalse(statusLabel.isEmpty, "The status message must have a spoken label. Label was '\(status.label)'.")
 
         XCTAssertTrue(app.staticTexts["model-identifier"].exists)
         XCTAssertTrue(app.staticTexts["installed-version"].exists)
@@ -35,10 +36,18 @@ final class AccessibilityAuditUITests: XCTestCase {
     func testInteractiveControlsHaveNonEmptyLabels() {
         waitUntilSettled()
 
-        // Window chrome that XCTest inserts (_XCUI:CloseWindow and similar) is not an app control.
-        let buttons = app.buttons.allElementsBoundByIndex.filter { !$0.identifier.hasPrefix("_XCUI:") }
-        XCTAssertGreaterThan(buttons.count, 0, "The window should expose at least the Look up button.")
+        // Every control this edition creates has an accessibilityIdentifier.
+        // Window chrome on the runner has an empty identifier and is not one of those controls.
+        let buttons = app.buttons.allElementsBoundByIndex
         for button in buttons {
+            print("BUTTON_AUDIT id=\(button.identifier) label=\(button.label)")
+        }
+        let owned = buttons.filter { button in
+            let identifier = button.identifier
+            return !identifier.isEmpty && !identifier.hasPrefix("_XCUI:")
+        }
+        XCTAssertTrue(owned.contains { $0.identifier == "lookup-button" }, "The Look up button should be present.")
+        for button in owned {
             let label = button.label.trimmingCharacters(in: .whitespacesAndNewlines)
             XCTAssertFalse(label.isEmpty, "A button is missing an accessibility label. identifier=\(button.identifier)")
         }

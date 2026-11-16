@@ -47,12 +47,13 @@ struct ContentView: View {
                 ProgressView("Working, the window is not frozen.")
                     .accessibilityIdentifier("working-indicator")
             }
+            // The label is the sentence itself. A container label plus
+            // children: .contain left this text with an empty label and made
+            // the accessibility audit report a parent/child mismatch.
             Text(session.statusMessage)
-                .textSelection(.enabled)
+                .accessibilityLabel(session.statusMessage)
                 .accessibilityIdentifier("status-message")
         }
-        .accessibilityElement(children: .contain)
-        .accessibilityLabel("Status. \(session.statusMessage)")
     }
 
     private var thisMacBlock: some View {
@@ -192,7 +193,6 @@ struct ContentView: View {
             }
         }
         .padding(.vertical, 4)
-        .accessibilityElement(children: .contain)
     }
 
     private var aboutBlock: some View {
