@@ -82,3 +82,10 @@ swift test
 ```
 
 The checked-in catalog was retrieved 2026-11-06.
+
+## Mac App Store edition
+
+`MacOSManagerStore/` is a separate, sandboxed edition. It helps a VoiceOver user install, upgrade, or downgrade macOS on the Mac itself by opening Apple's official installer or Software Update pages. Apple handles the download and progress. It does not include the full edition's bootable USB installer code, and it does not replace this itch.io edition.
+
+See `MacOSManagerStore/README.md` for layout, tests, review notes, and the Guideline 4.2 risk note. Signing and App Store submission wait until the individual Apple Developer account is active.
+
