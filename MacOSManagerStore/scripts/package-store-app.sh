@@ -67,11 +67,35 @@ fi
 
 echo "Product: $APP"
 file "$BINARY"
-if command -v lipo >/dev/null 2>&1; then
-  lipo -info "$BINARY" || true
+if ! command -v lipo >/dev/null 2>&1; then
+  echo "BLOCKER: lipo is required to confirm the universal binary."
+  exit 3
+fi
+LIPO_INFO="$(lipo -info "$BINARY")"
+echo "$LIPO_INFO"
+if [[ "$LIPO_INFO" != *"x86_64"* || "$LIPO_INFO" != *"arm64"* ]]; then
+  echo "BLOCKER: the app executable must contain both x86_64 and arm64 slices."
+  exit 3
 fi
 if command -v vtool >/dev/null 2>&1; then
-  vtool -show-build "$BINARY" || true
+  VTOOL=(vtool)
+elif xcrun --find vtool >/dev/null 2>&1; then
+  VTOOL=(xcrun vtool)
+else
+  echo "BLOCKER: vtool is required to confirm the minimum system version."
+  exit 3
+fi
+BUILD_INFO="$("${VTOOL[@]}" -show-build "$BINARY")"
+echo "$BUILD_INFO"
+if ! grep -q "minos 14.0" <<<"$BUILD_INFO"; then
+  echo "BLOCKER: expected LC_BUILD_VERSION minos 14.0."
+  exit 3
+fi
+OTHER_MINOS="$(grep "minos" <<<"$BUILD_INFO" | grep -v "minos 14.0" || true)"
+if [[ -n "$OTHER_MINOS" ]]; then
+  echo "BLOCKER: unexpected minimum system version:"
+  echo "$OTHER_MINOS"
+  exit 3
 fi
 otool -l "$BINARY" | awk '/LC_BUILD_VERSION/,/minos/' || true
 plutil -p "$APP/Contents/Info.plist" | awk '/CFBundleShortVersionString|CFBundleVersion|LSMinimumSystemVersion|CFBundleIdentifier/'
@@ -84,8 +108,17 @@ else
 fi
 echo "Entitlements requested in the project include App Sandbox. This unsigned CI build is not a signed App Store archive."
 echo "Codesign:"
-codesign -dv --verbose=4 "$APP" 2>&1 || true
-echo "Signing and App Store submission wait for Apple Developer account activation. No Developer ID or distribution certificate is used here."
+SIGN_STATUS="$(codesign -dv --verbose=4 "$APP" 2>&1 || true)"
+echo "$SIGN_STATUS"
+if grep -q "Authority=" <<<"$SIGN_STATUS"; then
+  echo "BLOCKER: this build attached a signing authority. The App Store edition CI artifact must stay unsigned."
+  exit 4
+fi
+if ! grep -q "not signed at all" <<<"$SIGN_STATUS"; then
+  echo "BLOCKER: expected codesign to report that the app is not signed at all."
+  exit 4
+fi
+echo "Confirmed the app is unsigned. Signing and App Store submission wait for Apple Developer account activation. No Developer ID or distribution certificate is used here."
 
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 ZIP="$PRODUCT_DIR/MacOSManagerStore-unsigned-${STAMP}.zip"

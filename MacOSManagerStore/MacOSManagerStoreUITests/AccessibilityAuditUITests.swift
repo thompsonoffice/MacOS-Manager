@@ -10,6 +10,7 @@ final class AccessibilityAuditUITests: XCTestCase {
     }
 
     func testMainWindowHasLabeledStatusModelAndVersionList() {
+        waitUntilSettled()
         let root = app.descendants(matching: .any)["store-root"]
         XCTAssertTrue(root.waitForExistence(timeout: 10), "The main window root should appear.")
 
@@ -32,15 +33,14 @@ final class AccessibilityAuditUITests: XCTestCase {
     }
 
     func testInteractiveControlsHaveNonEmptyLabels() {
-        // Give the async catalog load a moment so version rows can appear on a real Mac.
-        _ = app.staticTexts["status-message"].waitForExistence(timeout: 15)
-        sleep(2)
+        waitUntilSettled()
 
-        let buttons = app.buttons.allElementsBoundByIndex
+        // Window chrome that XCTest inserts (_XCUI:CloseWindow and similar) is not an app control.
+        let buttons = app.buttons.allElementsBoundByIndex.filter { !$0.identifier.hasPrefix("_XCUI:") }
         XCTAssertGreaterThan(buttons.count, 0, "The window should expose at least the Look up button.")
         for button in buttons {
             let label = button.label.trimmingCharacters(in: .whitespacesAndNewlines)
-            XCTAssertFalse(label.isEmpty, "A button is missing an accessibility label.")
+            XCTAssertFalse(label.isEmpty, "A button is missing an accessibility label. identifier=\(button.identifier)")
         }
 
         let fields = app.textFields.allElementsBoundByIndex
@@ -51,12 +51,62 @@ final class AccessibilityAuditUITests: XCTestCase {
     }
 
     func testAuditDoesNotOpenApplePagesOrStartADownload() {
+        waitUntilSettled()
         // This test only inspects the UI. It does not click a download button,
         // so CI cannot start an Apple download or Software Update.
         let downloadButtons = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "open-apple-download-"))
         // Presence is allowed; clicking is not part of this audit.
         _ = downloadButtons.count
         XCTAssertTrue(app.buttons["lookup-button"].exists)
+    }
+
+    func testSystemAccessibilityAudit() throws {
+        waitUntilSettled()
+        // performAccessibilityAudit inspects the hierarchy. It does not activate controls,
+        // so it does not open an Apple page or start a download.
+        do {
+            try app.performAccessibilityAudit { issue in
+                let element = issue.element.map { "\($0)" } ?? "no element"
+                print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element)")
+                return false
+            }
+        } catch {
+            let text = String(describing: error)
+            if text.localizedCaseInsensitiveContains("not supported") || text.localizedCaseInsensitiveContains("unavailable") {
+                throw XCTSkip("Accessibility audit is not available on this runner: \(text)")
+            }
+            throw error
+        }
+    }
+
+    private func waitUntilSettled() {
+        let status = app.staticTexts["status-message"]
+        XCTAssertTrue(status.waitForExistence(timeout: 20), "A plain-language status message should appear.")
+        let deadline = Date().addingTimeInterval(45)
+        var stableSince: Date?
+        var last = ""
+        while Date() < deadline {
+            let indicator = app.descendants(matching: .any)["working-indicator"]
+            let current = status.label
+            let busy = indicator.exists
+                || current.contains("not been read yet")
+                || current.contains("Reading the bundled")
+                || current.contains("Looking up ")
+            if busy || current != last {
+                stableSince = nil
+                last = current
+            } else if let stableSince {
+                if Date().timeIntervalSince(stableSince) >= 0.8 {
+                    print("SETTLED_STATUS \(current)")
+                    return
+                }
+            } else {
+                stableSince = Date()
+            }
+            Thread.sleep(forTimeInterval: 0.2)
+        }
+        print("VISIBLE_TEXT \(app.staticTexts.allElementsBoundByIndex.prefix(40).map(\.label))")
+        XCTFail("The window did not settle. Last status: \(status.label)")
     }
 
     private func elementExists(_ identifier: String) -> Bool {

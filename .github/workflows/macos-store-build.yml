@@ -1,0 +1,136 @@
+# App Store edition only. The itch.io full edition stays on macos-build.yml.
+#
+# Runner: macos-15-intel. GitHub's runner reference lists that label as Intel macOS 15.
+# macos-latest and macos-26 are arm64 and are not used here.
+# The macOS 15 Intel image readme lists default Xcode 16.4.
+#
+# A green run unit-tests the store package, runs the UI tests (including the
+# accessibility audit), and uploads an unsigned universal zip.
+# It does not sign with a Developer ID, notarize, publish, or submit to App Store Connect.
+# The audit inspects the window. It does not click a download button.
+name: macOS App Store edition
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: macos-store-build-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    timeout-minutes: 60
+    env:
+      NSUnbufferedIO: "YES"
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@v4
+
+      - name: Xcode and Swift
+        run: |
+          xcodebuild -version
+          swift --version
+          uname -m
+          sw_vers
+
+      - name: Unit tests
+        id: unit
+        continue-on-error: true
+        working-directory: MacOSManagerStore
+        run: |
+          set -o pipefail
+          mkdir -p build
+          swift test --xunit-output build/unit-tests.xml 2>&1 | tee build/unit-tests.log
+
+      - name: Accessibility audit and UI tests
+        id: ui
+        continue-on-error: true
+        working-directory: MacOSManagerStore
+        run: |
+          set -o pipefail
+          mkdir -p build
+          rm -rf build/ui-tests.xcresult
+          xcodebuild test \
+            -project MacOSManagerStore.xcodeproj \
+            -scheme MacOSManagerStore \
+            -destination 'platform=macOS,arch=x86_64' \
+            -derivedDataPath build/DerivedDataUITests \
+            -resultBundlePath build/ui-tests.xcresult \
+            -parallel-testing-enabled NO \
+            ARCHS=x86_64 \
+            ONLY_ACTIVE_ARCH=YES \
+            MACOSX_DEPLOYMENT_TARGET=14.0 \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build/ui-tests.log
+
+      - name: Unsigned universal app
+        id: package
+        continue-on-error: true
+        working-directory: MacOSManagerStore
+        env:
+          MACOS_MANAGER_SKIP_UNIT_TEST: "1"
+        run: scripts/package-store-app.sh
+
+      - name: Upload unsigned zip
+        if: steps.package.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacOSManagerStore-unsigned
+          path: MacOSManagerStore/build/product/*.zip
+          if-no-files-found: error
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MacOSManagerStore-test-reports
+          path: |
+            MacOSManagerStore/build/unit-tests.log
+            MacOSManagerStore/build/unit-tests.xml
+            MacOSManagerStore/build/ui-tests.log
+            MacOSManagerStore/build/ui-tests.xcresult
+          if-no-files-found: ignore
+
+      - name: Summarize tests
+        if: always()
+        working-directory: MacOSManagerStore
+        run: |
+          {
+            echo "## Store edition tests"
+            echo
+            echo "### Unit tests"
+            echo '```'
+            if [[ -f build/unit-tests.log ]]; then
+              grep -E "Test Suite 'All tests'|Executed |error:" build/unit-tests.log | tail -n 30 || true
+            else
+              echo "Unit test log was not written."
+            fi
+            echo '```'
+            echo
+            echo "### UI tests and accessibility audit"
+            echo '```'
+            if [[ -d build/ui-tests.xcresult ]]; then
+              xcrun xcresulttool get test-results summary --path build/ui-tests.xcresult || true
+            fi
+            if [[ -f build/ui-tests.log ]]; then
+              grep -E "TEST (SUCCEEDED|FAILED)|ACCESSIBILITY_AUDIT|SETTLED_STATUS|error:|Executed " build/ui-tests.log | tail -n 80 || true
+            else
+              echo "UI test log was not written."
+            fi
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Require unit tests, UI tests, and the unsigned build
+        if: always()
+        run: |
+          set -euo pipefail
+          echo "unit=${{ steps.unit.outcome }} ui=${{ steps.ui.outcome }} package=${{ steps.package.outcome }}"
+          test "${{ steps.unit.outcome }}" = "success"
+          test "${{ steps.ui.outcome }}" = "success"
+          test "${{ steps.package.outcome }}" = "success"
