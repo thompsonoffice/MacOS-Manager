@@ -22,7 +22,6 @@ struct ReadinessScreen: View {
                     .accessibilityAddTraits(.isHeader)
                 Text(readiness.spokenSummary)
                     .font(.body)
-                    .accessibilityElement(children: .ignore)
                     .accessibilityLabel(readiness.spokenSummary)
                     .accessibilityHint("Spoken summary of the model, free space, memory, upgrade or downgrade, and power checks.")
                     .accessibilityIdentifier("readiness-summary")
@@ -54,10 +53,8 @@ struct ReadinessScreen: View {
                     .font(.headline)
                 Text(check.detail)
                     .font(.body)
+                    .accessibilityIdentifier("readiness-check-\(check.id)")
             }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("\(check.title). \(outcomeWord(check.outcome)). \(check.detail)")
-            .accessibilityIdentifier("readiness-check-\(check.id)")
 
             if let url = check.sourceURL, let title = check.sourceButtonTitle {
                 Button(title) {
