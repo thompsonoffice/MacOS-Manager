@@ -96,7 +96,6 @@ struct ContentView: View {
 
             TextField("Model identifier", text: $session.queryText)
                 .textFieldStyle(.roundedBorder)
-                .accessibilityElement(children: .combine)
                 .accessibilityLabel("Model identifier")
                 .accessibilityHint("Type a hw.model identifier if the automatic reading is wrong or missing, then choose Look up.")
                 .accessibilityIdentifier("identifier-field")
