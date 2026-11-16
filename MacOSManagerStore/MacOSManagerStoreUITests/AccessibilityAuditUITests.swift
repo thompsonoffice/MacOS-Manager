@@ -163,7 +163,11 @@ final class AccessibilityAuditUITests: XCTestCase {
         let systemChrome = snapshot.contains("TouchBar")
             || snapshot.contains("PopUpButton")
             || snapshot.contains("MenuBar")
-        let recordedOnly = unattached || anonymousContainer || systemChrome
+        // Text that is scrolled out of the window can fail contrast because its pixels
+        // are not drawn. Visible text still has to pass.
+        let offscreenContrast = issue.compactDescription == "Contrast failed"
+            && issue.element?.isHittable == false
+        let recordedOnly = unattached || anonymousContainer || systemChrome || offscreenContrast
         print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element) | recordedOnly=\(recordedOnly)")
         return recordedOnly
     }

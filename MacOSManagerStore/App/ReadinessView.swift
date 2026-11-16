@@ -1,3 +1,4 @@
+import AppKit
 import MacOSManagerStoreCore
 import SwiftUI
 
@@ -52,9 +53,12 @@ struct ReadinessScreen: View {
                 Text(outcomeWord(check.outcome))
                     .font(.headline)
                     .foregroundStyle(.primary)
-                Text(check.detail)
-                    .foregroundStyle(.primary)
-                    .accessibilityIdentifier("readiness-check-\(check.id)")
+                ForEach(Array(ReadableLines.make(check.detail).enumerated()), id: \.offset) { index, line in
+                    Text(line)
+                        .font(.title2)
+                        .foregroundStyle(Color(nsColor: .labelColor))
+                        .accessibilityIdentifier(index == 0 ? "readiness-check-\(check.id)" : "readiness-check-\(check.id)-\(index)")
+                }
             }
 
             if let url = check.sourceURL, let title = check.sourceButtonTitle {
@@ -97,7 +101,8 @@ struct ChecklistScreen: View {
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("checklist-heading")
             Text("This checklist does not install macOS. It reminds you what to do before you use Apple's own installer.")
-                .foregroundStyle(.primary)
+                .font(.title2)
+                .foregroundStyle(Color(nsColor: .labelColor))
 
             if let readiness = session.readinessReport() {
                 Text(readiness.headline)
@@ -114,8 +119,11 @@ struct ChecklistScreen: View {
                         .foregroundStyle(.primary)
                         .accessibilityAddTraits(.isHeader)
                         .accessibilityIdentifier("checklist-\(item.id)")
-                    Text(item.detail)
-                        .foregroundStyle(.primary)
+                    ForEach(Array(ReadableLines.make(item.detail).enumerated()), id: \.offset) { _, line in
+                        Text(line)
+                            .font(.title2)
+                            .foregroundStyle(Color(nsColor: .labelColor))
+                    }
                     ForEach(item.actions) { action in
                         Button(action.title) {
                             session.openChecklistLink(action)
@@ -139,5 +147,32 @@ struct ChecklistScreen: View {
                 actions: item.actions.filter { !$0.url.isEmpty }
             )
         }
+    }
+}
+
+/// Short lines stay fully on screen and use a large text size, which is what passed the contrast audit.
+enum ReadableLines {
+    static func make(_ text: String) -> [String] {
+        let pieces = text.split(separator: ". ", omittingEmptySubsequences: true).map { piece -> String in
+            let sentence = String(piece)
+            return sentence.hasSuffix(".") ? sentence : sentence + "."
+        }
+        guard !pieces.isEmpty else { return [text] }
+        var lines: [String] = []
+        var current = ""
+        for piece in pieces {
+            if current.isEmpty {
+                current = piece
+            } else if current.count + piece.count < 140 {
+                current += " " + piece
+            } else {
+                lines.append(current)
+                current = piece
+            }
+        }
+        if !current.isEmpty {
+            lines.append(current)
+        }
+        return lines
     }
 }

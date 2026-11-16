@@ -1,3 +1,4 @@
+import AppKit
 import MacOSManagerStoreCore
 import SwiftUI
 
@@ -28,6 +29,7 @@ struct ContentView: View {
                     .padding(24)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .background(Color(nsColor: .windowBackgroundColor))
                 .accessibilityElement(children: .contain)
                 .accessibilityLabel("macOS Manager")
             }

@@ -8,8 +8,9 @@ struct MacOSManagerStoreApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(session)
-                .frame(minWidth: 720, minHeight: 560)
+                .frame(minWidth: 720, minHeight: 640)
         }
+        .defaultSize(width: 880, height: 980)
         .commands {
             CommandGroup(replacing: .newItem) { }
         }
