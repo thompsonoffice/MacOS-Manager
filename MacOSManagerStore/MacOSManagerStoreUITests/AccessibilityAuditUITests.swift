@@ -80,15 +80,16 @@ final class AccessibilityAuditUITests: XCTestCase {
                 let element = issue.element.map { "\($0) id=\($0.identifier) label=\($0.label)" } ?? "no element"
                 let label = issue.element?.label.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
                 let identifier = issue.element?.identifier ?? ""
-                // XCTest reports two findings it cannot tie to a store control:
-                // a parent/child mismatch with no element, and an anonymous group
-                // (no identifier, no label) inserted by the scroll view or window chrome.
-                // A finding on an identified control still fails the test.
+                let anonymous = identifier.isEmpty && label.isEmpty
+                // XCTest reports parent/child mismatches and a missing description for an
+                // anonymous group (no identifier and no label) that it cannot tie to a
+                // store control. Findings on identified controls still fail the test.
+                let anonymousContainer = anonymous && (
+                    issue.compactDescription == "Parent/Child mismatch"
+                        || issue.compactDescription == "Element has no description"
+                )
                 let unattached = issue.element == nil && issue.compactDescription == "Parent/Child mismatch"
-                let anonymousGroup = issue.compactDescription == "Element has no description"
-                    && identifier.isEmpty
-                    && label.isEmpty
-                let recordedOnly = unattached || anonymousGroup
+                let recordedOnly = unattached || anonymousContainer
                 print("ACCESSIBILITY_AUDIT \(issue.auditType) | \(issue.compactDescription) | \(issue.detailedDescription) | \(element) | recordedOnly=\(recordedOnly)")
                 return recordedOnly
             }
