@@ -36,7 +36,6 @@ struct ContentView: View {
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("app-title")
             Text("This App Store edition helps you install, upgrade, or downgrade macOS on this Mac. It reads the model identifier, lists every compatible version from Apple's published pages, and opens Apple's official installer or Software Update page for the version you choose. Apple handles the download and progress. This edition does not create a bootable USB installer.")
-                .foregroundStyle(.secondary)
         }
     }
 
@@ -120,7 +119,6 @@ struct ContentView: View {
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityIdentifier("compatible-version-list")
             Text("A version appears here only when Apple's compatibility page uses this exact model name, or when Apple's published Apple silicon statement covers it. Similar names are not treated as a match. Choose a version to install, upgrade, or downgrade on this Mac. Versions older than macOS Catalina have no per-model list in this table.")
-                .foregroundStyle(.secondary)
             if let report = session.report, report.found {
                 let rows = report.compatibleVersions
                 if rows.isEmpty {
