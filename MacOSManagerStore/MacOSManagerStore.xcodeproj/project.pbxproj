@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B20000000000000000000032 /* MacOSManagerStoreCore in Frameworks */ = {isa = PBXBuildFile; productRef = B20000000000000000000031 /* MacOSManagerStoreCore */; };
+		B20000000000000000000071 /* MacOSManagerStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000051 /* MacOSManagerStoreApp.swift */; };
+		B20000000000000000000072 /* StoreSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000052 /* StoreSession.swift */; };
+		B20000000000000000000073 /* SystemProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000053 /* SystemProbe.swift */; };
+		B20000000000000000000074 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000054 /* ContentView.swift */; };
+		B20000000000000000000075 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000092 /* PrivacyInfo.xcprivacy */; };
+		B20000000000000000000076 /* AccessibilityAuditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000093 /* AccessibilityAuditUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B20000000000000000000070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B20000000000000000000010;
+			remoteInfo = MacOSManagerStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B20000000000000000000020 /* MacOSManagerStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOSManagerStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000021 /* MacOSManagerStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacOSManagerStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000051 /* MacOSManagerStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSManagerStoreApp.swift; sourceTree = "<group>"; };
+		B20000000000000000000052 /* StoreSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSession.swift; sourceTree = "<group>"; };
+		B20000000000000000000053 /* SystemProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProbe.swift; sourceTree = "<group>"; };
+		B20000000000000000000054 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B20000000000000000000090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20000000000000000000091 /* MacOSManagerStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSManagerStore.entitlements; sourceTree = "<group>"; };
+		B20000000000000000000092 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B20000000000000000000093 /* AccessibilityAuditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityAuditUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B20000000000000000000012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000032 /* MacOSManagerStoreCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20000000000000000000062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B20000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000004 /* App */,
+				B20000000000000000000005 /* MacOSManagerStoreUITests */,
+				B20000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B20000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000020 /* MacOSManagerStore.app */,
+				B20000000000000000000021 /* MacOSManagerStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B20000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000051 /* MacOSManagerStoreApp.swift */,
+				B20000000000000000000052 /* StoreSession.swift */,
+				B20000000000000000000053 /* SystemProbe.swift */,
+				B20000000000000000000054 /* ContentView.swift */,
+				B20000000000000000000090 /* Info.plist */,
+				B20000000000000000000091 /* MacOSManagerStore.entitlements */,
+				B20000000000000000000092 /* PrivacyInfo.xcprivacy */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B20000000000000000000005 /* MacOSManagerStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000093 /* AccessibilityAuditUITests.swift */,
+			);
+			path = MacOSManagerStoreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B20000000000000000000010 /* MacOSManagerStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20000000000000000000041 /* Build configuration list for PBXNativeTarget "MacOSManagerStore" */;
+			buildPhases = (
+				B20000000000000000000011 /* Sources */,
+				B20000000000000000000012 /* Frameworks */,
+				B20000000000000000000013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacOSManagerStore;
+			packageProductDependencies = (
+				B20000000000000000000031 /* MacOSManagerStoreCore */,
+			);
+			productName = MacOSManagerStore;
+			productReference = B20000000000000000000020 /* MacOSManagerStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B20000000000000000000060 /* MacOSManagerStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B20000000000000000000063 /* Build configuration list for PBXNativeTarget "MacOSManagerStoreUITests" */;
+			buildPhases = (
+				B20000000000000000000061 /* Sources */,
+				B20000000000000000000062 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20000000000000000000080 /* PBXTargetDependency */,
+			);
+			name = MacOSManagerStoreUITests;
+			productName = MacOSManagerStoreUITests;
+			productReference = B20000000000000000000021 /* MacOSManagerStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B20000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					B20000000000000000000060 = {
+						TestTargetID = B20000000000000000000010;
+					};
+				};
+			};
+			buildConfigurationList = B20000000000000000000040 /* Build configuration list for PBXProject "MacOSManagerStore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B20000000000000000000002;
+			packageReferences = (
+				B20000000000000000000030 /* XCLocalSwiftPackageReference "." */,
+			);
+			productRefGroup = B20000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B20000000000000000000010 /* MacOSManagerStore */,
+				B20000000000000000000060 /* MacOSManagerStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B20000000000000000000013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000075 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B20000000000000000000011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000071 /* MacOSManagerStoreApp.swift in Sources */,
+				B20000000000000000000072 /* StoreSession.swift in Sources */,
+				B20000000000000000000073 /* SystemProbe.swift in Sources */,
+				B20000000000000000000074 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20000000000000000000061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000076 /* AccessibilityAuditUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B20000000000000000000080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B20000000000000000000010 /* MacOSManagerStore */;
+			targetProxy = B20000000000000000000070 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B20000000000000000000042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B20000000000000000000043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B20000000000000000000044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64 arm64";
+				CODE_SIGN_ENTITLEMENTS = App/MacOSManagerStore.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = office.thompson.MacOSManagerStore;
+				PRODUCT_NAME = MacOSManagerStore;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B20000000000000000000045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64 arm64";
+				CODE_SIGN_ENTITLEMENTS = App/MacOSManagerStore.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = office.thompson.MacOSManagerStore;
+				PRODUCT_NAME = MacOSManagerStore;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B20000000000000000000064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = office.thompson.MacOSManagerStoreUITests;
+				PRODUCT_NAME = MacOSManagerStoreUITests;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacOSManagerStore;
+			};
+			name = Debug;
+		};
+		B20000000000000000000065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = office.thompson.MacOSManagerStoreUITests;
+				PRODUCT_NAME = MacOSManagerStoreUITests;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MacOSManagerStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B20000000000000000000040 /* Build configuration list for PBXProject "MacOSManagerStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20000000000000000000042 /* Debug */,
+				B20000000000000000000043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20000000000000000000041 /* Build configuration list for PBXNativeTarget "MacOSManagerStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20000000000000000000044 /* Debug */,
+				B20000000000000000000045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20000000000000000000063 /* Build configuration list for PBXNativeTarget "MacOSManagerStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20000000000000000000064 /* Debug */,
+				B20000000000000000000065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B20000000000000000000030 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B20000000000000000000031 /* MacOSManagerStoreCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20000000000000000000030 /* XCLocalSwiftPackageReference "." */;
+			productName = MacOSManagerStoreCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B20000000000000000000001 /* Project object */;
+}
