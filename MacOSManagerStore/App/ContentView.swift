@@ -21,6 +21,8 @@ struct ContentView: View {
                     .padding(24)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .accessibilityElement(children: .contain)
+                .accessibilityLabel("macOS Manager")
             }
         }
         .onAppear { session.start() }
